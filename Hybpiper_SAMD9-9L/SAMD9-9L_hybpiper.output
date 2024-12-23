@@ -1,0 +1,243 @@
+
+                                                     T
+                                                        T
+                                         C  G
+ _    _            _       _____      T        G        A
+| |  | |          | |     |  _  \  A              A  A
+| |__| | __    __ | |___  | |_| |  _   _____   _____   _____
+|  __  | \ \  / / |  _  \ |  ___/ | | |  _  \ |  _  | |  _  \
+| |  | |  \ \/ /  | |_| | | |     | | | |_| | |  __/  | |  --
+|_|  |_|   \  /   |_____/ |_|     |_| |  ___/ |_____| |_|
+           / /                        | |
+          /_/                         |_|
+
+
+[INFO]:    HybPiper version 2.3.1 was called with these arguments:
+           /home/lokdeep/anaconda3/envs/hybpiper/bin/hybpiper assemble -r
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq -t_dna SAMD9-SAMD9L.fa --prefix
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast --evalue 0.01 --cpu 64
+
+[INFO]:    Using 64 cpus/threads.
+[INFO]:    Checking for external dependencies:
+
+blastx               found at /home/lokdeep/anaconda3/envs/hybpiper/bin/blastx
+exonerate            found at /home/lokdeep/anaconda3/envs/hybpiper/bin/exonerate
+parallel             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/parallel
+makeblastdb          found at /home/lokdeep/anaconda3/envs/hybpiper/bin/makeblastdb
+spades.py            found at /home/lokdeep/anaconda3/envs/hybpiper/bin/spades.py
+bwa                  found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bwa
+samtools             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/samtools
+bbmap.sh             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bbmap.sh
+bbmerge.sh           found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bbmerge.sh
+diamond              found at /home/lokdeep/anaconda3/envs/hybpiper/bin/diamond
+mafft                found at /home/lokdeep/anaconda3/envs/hybpiper/bin/mafft
+
+[INFO]:    Everything looks good!
+[WARNING]: You have specified that your target file contains DNA sequences, but BLASTx or
+           DIAMOND has been selected for read mapping. Your target file will be
+           translated!
+[INFO]:    Checking target file for issues...
+[INFO]:    Writing a translated target file to: /media/lokdeep/sdf/BUDDHA/
+           Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/
+           translated_target_file.fasta
+[INFO]:    The target file FASTA header formatting looks good!
+[INFO]:    There are 42 sequences in your target file that contain a single terminal stop
+           codon. Sequence names have been written to a report file.
+[INFO]:    No problems found in target file!
+[INFO]:    A target file report has been written to:
+           /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/check_targetfile_report-SAMD9-SAMD9L.txt
+[INFO]:    Output will be written to the directory: /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast
+[INFO]:    Making protein blastdb in current directory.
+[CMD]:     makeblastdb -dbtype prot -in translated_target_file.fasta
+[CMD]:     cat /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq | awk '{if(NR % 4 == 1 || NR %
+           4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64 -k --block 200K --recstart
+           '>' --pipe 'blastx -db translated_target_file.fasta -query - -evalue 0.01
+           -outfmt 6 -max_target_seqs 10' >>
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.blastx
+[CMD]:     cat /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq | awk '{if(NR % 4 == 1 || NR %
+           4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64 -k --block 200K --recstart
+           '>' --pipe 'blastx -db translated_target_file.fasta -query - -evalue 0.01
+           -outfmt 6 -max_target_seqs 10' >>
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.blastx
+[INFO]:    Gathering IDs for mapped reads...
+[INFO]:    In total, 4308 reads from the paired-end read files will be distributed to gene directories
+[NOTE]:    Distributing paired reads to gene directories
+           Elapsed Time: 0:00:00|                               |ETA:  --:--:--
+           Elapsed Time: 0:00:00|###############################|Time:  0:00:00
+[NOTE]:    0 genes had no good matches.
+[NOTE]:    Running initial SPAdes assemblies for 2 genes with reads...
+[INFO]:    See file "spades_initial_commands.txt" for a list of SPAdes commands
+
+Computers / CPU threads / Max jobs to run
+1:local / 64 / 64
+
+Computer:jobs running/jobs completed/%of started jobs/Average seconds to complete
+ETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 1 AVG: 0.00s  local:1/1/100%/3.0s [KETA: 0s Left: 1 AVG: 0.00s  local:1/1/100%/3.0s [KETA: 0s Left: 1 AVG: 0.00s  local:1/1/100%/3.0s [KETA: 0s Left: 0 AVG: 0.00s  local:0/2/100%/1.5s [KETA: 0s Left: 0 AVG: 0.00s  local:0/2/100%/1.5s [K
+[WARNING]: Total number of genes with failed initial SPAdes run: 0. Gene names can be found in the sample log file.
+[INFO]:    Finished running initial SPAdes assemblies for all genes with reads!
+[INFO]:    Running exonerate_hits for 2 genes...
+
+[INFO]:    Generated sequences from 2 genes!
+[WARNING]: 1 genes contain internal stop codons. See file
+           "XM_003771945.4_XM_031940019.1-SRR5055303-6_blast_genes_with_non_terminal_stop_
+           codons.txt" for a list of gene names, and visit the wiki at the following link
+           to view troubleshooting recommendations:
+           https://github.com/mossmatters/HybPiper/wiki/Troubleshooting,-common-issues,-and-recommendations#31-sequences-containing-stop-codons
+[WARNING]: Potential long paralogs detected for 0 genes!
+[WARNING]: Potential paralogs detected via contig depth for 0 genes!
+
+Finished running "hybpiper assemble" for sample XM_003771945.4_XM_031940019.1-SRR5055303-6_blast!
+
+
+                                                     T
+                                                        T
+                                         C  G
+ _    _            _       _____      T        G        A
+| |  | |          | |     |  _  \  A              A  A
+| |__| | __    __ | |___  | |_| |  _   _____   _____   _____
+|  __  | \ \  / / |  _  \ |  ___/ | | |  _  \ |  _  | |  _  \
+| |  | |  \ \/ /  | |_| | | |     | | | |_| | |  __/  | |  --
+|_|  |_|   \  /   |_____/ |_|     |_| |  ___/ |_____| |_|
+           / /                        | |
+          /_/                         |_|
+
+
+[INFO]:    HybPiper version 2.3.1 was called with these arguments:
+           /home/lokdeep/anaconda3/envs/hybpiper/bin/hybpiper assemble -r
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq -t_dna
+           SAMD9-SAMD9L_wo_thylacine.fa --prefix
+           Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast --evalue
+           0.01 --cpu 64
+
+[INFO]:    Using 64 cpus/threads.
+[INFO]:    Checking for external dependencies:
+
+blastx               found at /home/lokdeep/anaconda3/envs/hybpiper/bin/blastx
+exonerate            found at /home/lokdeep/anaconda3/envs/hybpiper/bin/exonerate
+parallel             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/parallel
+makeblastdb          found at /home/lokdeep/anaconda3/envs/hybpiper/bin/makeblastdb
+spades.py            found at /home/lokdeep/anaconda3/envs/hybpiper/bin/spades.py
+bwa                  found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bwa
+samtools             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/samtools
+bbmap.sh             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bbmap.sh
+bbmerge.sh           found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bbmerge.sh
+diamond              found at /home/lokdeep/anaconda3/envs/hybpiper/bin/diamond
+mafft                found at /home/lokdeep/anaconda3/envs/hybpiper/bin/mafft
+
+[INFO]:    Everything looks good!
+[WARNING]: You have specified that your target file contains DNA sequences, but BLASTx or
+           DIAMOND has been selected for read mapping. Your target file will be
+           translated!
+[INFO]:    Checking target file for issues...
+[INFO]:    Writing a translated target file to: /media/lokdeep/sdf/BUDDHA/
+           Hybpiper_SAMD9-9L/
+           Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/
+           translated_target_file.fasta
+[INFO]:    The target file FASTA header formatting looks good!
+[INFO]:    There are 40 sequences in your target file that contain a single terminal stop
+           codon. Sequence names have been written to a report file.
+[INFO]:    No problems found in target file!
+[INFO]:    A target file report has been written to:
+           /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/check_targetfile_report-SAMD9-SAMD9L_wo_thylacine.txt
+[INFO]:    Output will be written to the directory: /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast
+[INFO]:    Making protein blastdb in current directory.
+[CMD]:     makeblastdb -dbtype prot -in translated_target_file.fasta
+[CMD]:     cat /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq | awk '{if(NR % 4 == 1 || NR %
+           4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64 -k --block 200K --recstart
+           '>' --pipe 'blastx -db translated_target_file.fasta -query - -evalue 0.01
+           -outfmt 6 -max_target_seqs 10' >>
+           Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.blastx
+[CMD]:     cat /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq | awk '{if(NR % 4 == 1 || NR %
+           4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64 -k --block 200K --recstart
+           '>' --pipe 'blastx -db translated_target_file.fasta -query - -evalue 0.01
+           -outfmt 6 -max_target_seqs 10' >>
+           Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.blastx
+[INFO]:    Gathering IDs for mapped reads...
+[INFO]:    In total, 4306 reads from the paired-end read files will be distributed to gene directories
+[NOTE]:    Distributing paired reads to gene directories
+           Elapsed Time: 0:00:00|                               |ETA:  --:--:--
+           Elapsed Time: 0:00:00|###############################|Time:  0:00:00
+[NOTE]:    0 genes had no good matches.
+[NOTE]:    Running initial SPAdes assemblies for 2 genes with reads...
+[INFO]:    See file "spades_initial_commands.txt" for a list of SPAdes commands
+
+Computers / CPU threads / Max jobs to run
+1:local / 64 / 64
+
+Computer:jobs running/jobs completed/%of started jobs/Average seconds to complete
+ETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 2 AVG: 0.00s  local:2/0/100%/0.0s [KETA: 0s Left: 1 AVG: 0.00s  local:1/1/100%/3.0s [KETA: 0s Left: 1 AVG: 0.00s  local:1/1/100%/3.0s [KETA: 0s Left: 1 AVG: 0.00s  local:1/1/100%/3.0s [KETA: 0s Left: 0 AVG: 0.00s  local:0/2/100%/1.5s [KETA: 0s Left: 0 AVG: 0.00s  local:0/2/100%/1.5s [K
+[WARNING]: Total number of genes with failed initial SPAdes run: 0. Gene names can be found in the sample log file.
+[INFO]:    Finished running initial SPAdes assemblies for all genes with reads!
+[INFO]:    Running exonerate_hits for 2 genes...
+
+[INFO]:    Generated sequences from 2 genes!
+[WARNING]: 1 genes contain internal stop codons. See file "Without_thylacine_XM_003771945.
+           4_XM_031940019.1-SRR5055303-6_blast_genes_with_non_terminal_stop_codons.txt"
+           for a list of gene names, and visit the wiki at the following link to view
+           troubleshooting recommendations:
+           https://github.com/mossmatters/HybPiper/wiki/Troubleshooting,-common-issues,-and-recommendations#31-sequences-containing-stop-codons
+[WARNING]: Potential long paralogs detected for 0 genes!
+[WARNING]: Potential paralogs detected via contig depth for 0 genes!
+
+Finished running "hybpiper assemble" for sample Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast!
+
+
+                                                     T
+                                                        T
+                                         C  G
+ _    _            _       _____      T        G        A
+| |  | |          | |     |  _  \  A              A  A
+| |__| | __    __ | |___  | |_| |  _   _____   _____   _____
+|  __  | \ \  / / |  _  \ |  ___/ | | |  _  \ |  _  | |  _  \
+| |  | |  \ \/ /  | |_| | | |     | | | |_| | |  __/  | |  --
+|_|  |_|   \  /   |_____/ |_|     |_| |  ___/ |_____| |_|
+           / /                        | |
+          /_/                         |_|
+
+
+[INFO]:    HybPiper version 2.3.1 was called with these arguments:
+           retrieve_sequences --targetfile_dna SAMD9-SAMD9L.fa --single_sample_name
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast --fasta_dir
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.extracted_seq dna
+
+[INFO]:    Recovering dna sequences from the HybPiper run(s)...
+[INFO]:    Number of cpus/threads not specified, using all available cpus minus 1 (63).
+[INFO]:    The following target file was provided: "SAMD9-SAMD9L.fa".
+[INFO]:    Retrieving 2 genes from sample XM_003771945.4_XM_031940019.1-SRR5055303-6_blast...
+[INFO]:    Found 1 sequences for gene SAMD9
+[INFO]:    Found 1 sequences for gene SAMD9L
+[INFO]:    Done!
+
+                                                     T
+                                                        T
+                                         C  G
+ _    _            _       _____      T        G        A
+| |  | |          | |     |  _  \  A              A  A
+| |__| | __    __ | |___  | |_| |  _   _____   _____   _____
+|  __  | \ \  / / |  _  \ |  ___/ | | |  _  \ |  _  | |  _  \
+| |  | |  \ \/ /  | |_| | | |     | | | |_| | |  __/  | |  --
+|_|  |_|   \  /   |_____/ |_|     |_| |  ___/ |_____| |_|
+           / /                        | |
+          /_/                         |_|
+
+
+[INFO]:    HybPiper version 2.3.1 was called with these arguments:
+           retrieve_sequences --targetfile_dna SAMD9-SAMD9L_wo_thylacine.fa
+           --single_sample_name
+           Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast --fasta_dir 
+           Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.extracted_se
+           q dna
+
+[INFO]:    Recovering dna sequences from the HybPiper run(s)...
+[INFO]:    Number of cpus/threads not specified, using all available cpus minus 1 (63).
+[INFO]:    The following target file was provided: "SAMD9-SAMD9L_wo_thylacine.fa".
+[INFO]:    Retrieving 2 genes from sample Without_thylacine_XM_003771945.4_XM_031940019.1-SRR5055303-6_blast...
+[INFO]:    Found 1 sequences for gene SAMD9L
+[INFO]:    Found 1 sequences for gene SAMD9
+[INFO]:    Done!

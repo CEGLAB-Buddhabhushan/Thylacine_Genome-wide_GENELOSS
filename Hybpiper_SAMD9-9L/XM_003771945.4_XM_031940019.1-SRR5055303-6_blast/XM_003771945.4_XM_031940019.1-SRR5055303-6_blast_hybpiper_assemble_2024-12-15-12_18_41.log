@@ -1,0 +1,169 @@
+2024-12-15 12:18:41,553 - assemble.py - hybpiper.assemble - main - INFO - [INFO]:    HybPiper version 2.3.1 was called with these arguments:
+2024-12-15 12:18:41,553 - assemble.py - hybpiper.assemble - main - INFO -            /home/lokdeep/anaconda3/envs/hybpiper/bin/hybpiper assemble -r
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq -t_dna SAMD9-SAMD9L.fa --prefix
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast --evalue 0.01 --cpu 64
+
+2024-12-15 12:18:41,553 - assemble.py - hybpiper.assemble - main - DEBUG - Namespace(readfiles=['XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq', 'XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq'], targetfile_dna='SAMD9-SAMD9L.fa', targetfile_aa=False, unpaired=False, bwa=False, diamond=False, diamond_sensitivity=False, evalue=0.01, max_target_seqs=10, distribute_low_mem=False, cov_cutoff=8, spades_single_cell=False, kvals=None, merged=False, timeout_assemble_reads=0, no_spades_eta=False, not_protein_coding=False, extract_contigs_blast_task='blastn', extract_contigs_blast_evalue=10, extract_contigs_blast_word_size=None, extract_contigs_blast_gapopen=None, extract_contigs_blast_gapextend=None, extract_contigs_blast_penalty=None, extract_contigs_blast_reward=None, extract_contigs_blast_perc_identity=None, extract_contigs_blast_max_target_seqs=500, thresh=55, paralog_min_length_percentage=0.75, depth_multiplier=10, target=None, exclude=None, timeout_extract_contigs=120, no_stitched_contig=False, stitched_contig_pad_n=True, chimera_check=False, bbmap_memory=1000, bbmap_subfilter=7, bbmap_threads=1, chimeric_stitched_contig_edit_distance=5, chimeric_stitched_contig_discordant_reads_cutoff=5, trim_hit_sliding_window_size=None, trim_hit_sliding_window_thresh=None, skip_frameshifts=False, skip_internal_stops=False, skip_terminal_stops=False, exonerate_refine_full=False, no_intronerate=False, no_padding_supercontigs=False, prefix='XM_003771945.4_XM_031940019.1-SRR5055303-6_blast', start_from='map_reads', end_with='extract_contigs', force_overwrite=False, cpu=64, compress_sample_folder=False, skip_targetfile_checks=False, keep_intermediate_files=False, verbose_logging=False, output_folder=None, run_profiler=False, blast=True, func=<function assemble_main at 0x7f3e7de310d0>)
+2024-12-15 12:18:41,553 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - uname:     uname_result(system='Linux', node='workstation-HP-Z840', release='5.15.0-119-generic', version='#129~20.04.1-Ubuntu SMP Wed Aug 7 13:07:13 UTC 2024', machine='x86_64')
+2024-12-15 12:18:41,553 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - system:    Linux
+2024-12-15 12:18:41,553 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - node:      workstation-HP-Z840
+2024-12-15 12:18:41,553 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - release:   5.15.0-119-generic
+2024-12-15 12:18:41,553 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - version:   #129~20.04.1-Ubuntu SMP Wed Aug 7 13:07:13 UTC 2024
+2024-12-15 12:18:41,554 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - machine:   x86_64
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - processor: x86_64
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum core file size            (RLIMIT_CORE    ) :                    0                   -1
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum CPU time                  (RLIMIT_CPU     ) :                   -1                   -1
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum file size                 (RLIMIT_FSIZE   ) :                   -1                   -1
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum heap size                 (RLIMIT_DATA    ) :                   -1                   -1
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum stack size                (RLIMIT_STACK   ) :              8388608                   -1
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum resident set size         (RLIMIT_RSS     ) :                   -1                   -1
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum number of processes       (RLIMIT_NPROC   ) :              1030955              1030955
+2024-12-15 12:18:41,562 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum number of open files      (RLIMIT_NOFILE  ) :                 1024              1048576
+2024-12-15 12:18:41,563 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum lockable memory address   (RLIMIT_MEMLOCK ) :             67108864             67108864
+2024-12-15 12:18:41,563 - assemble.py - hybpiper.assemble - main - INFO - [INFO]:    Using 64 cpus/threads.
+2024-12-15 12:18:41,563 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    Checking for external dependencies:
+
+2024-12-15 12:18:41,563 - utils.py - hybpiper.assemble - log_or_print - INFO - blastx               found at /home/lokdeep/anaconda3/envs/hybpiper/bin/blastx
+2024-12-15 12:18:41,563 - utils.py - hybpiper.assemble - log_or_print - INFO - exonerate            found at /home/lokdeep/anaconda3/envs/hybpiper/bin/exonerate
+2024-12-15 12:18:41,574 - utils.py - hybpiper.assemble - log_or_print - INFO - parallel             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/parallel
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - makeblastdb          found at /home/lokdeep/anaconda3/envs/hybpiper/bin/makeblastdb
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - spades.py            found at /home/lokdeep/anaconda3/envs/hybpiper/bin/spades.py
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - bwa                  found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bwa
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - samtools             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/samtools
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - bbmap.sh             found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bbmap.sh
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - bbmerge.sh           found at /home/lokdeep/anaconda3/envs/hybpiper/bin/bbmerge.sh
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - diamond              found at /home/lokdeep/anaconda3/envs/hybpiper/bin/diamond
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - mafft                found at /home/lokdeep/anaconda3/envs/hybpiper/bin/mafft
+2024-12-15 12:18:41,575 - utils.py - hybpiper.assemble - log_or_print - INFO - 
+2024-12-15 12:18:41,575 - assemble.py - hybpiper.assemble - main - INFO - [INFO]:    Everything looks good!
+2024-12-15 12:18:41,576 - assemble.py - hybpiper.assemble - main - DEBUG - trim_hit_sliding_window_size: 5
+2024-12-15 12:18:41,576 - assemble.py - hybpiper.assemble - main - DEBUG - trim_hit_sliding_window_thresh: 75
+2024-12-15 12:18:41,576 - assemble.py - hybpiper.assemble - main - DEBUG - Input target file SAMD9-SAMD9L.fa exists and is not empty, proceeding...
+2024-12-15 12:18:41,576 - assemble.py - hybpiper.assemble - main - DEBUG - The target file SAMD9-SAMD9L.fa has been provided, containing DNA sequences
+2024-12-15 12:18:41,576 - assemble.py - hybpiper.assemble - main - DEBUG - Input read file /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq exists and is not empty, proceeding...
+2024-12-15 12:18:41,576 - assemble.py - hybpiper.assemble - main - DEBUG - Input read file /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq exists and is not empty, proceeding...
+2024-12-15 12:18:41,576 - utils.py - hybpiper.assemble - check_targetfile - INFO - [WARNING]: You have specified that your target file contains DNA sequences, but BLASTx or
+           DIAMOND has been selected for read mapping. Your target file will be
+           translated!
+2024-12-15 12:18:41,576 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    Checking target file for issues...
+2024-12-15 12:18:41,619 - utils.py - hybpiper.assemble - check_targetfile - INFO - [INFO]:    Writing a translated target file to: /media/lokdeep/sdf/BUDDHA/
+           Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/
+           translated_target_file.fasta
+2024-12-15 12:18:41,628 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    There are 42 sequences in your target file that contain a single terminal stop
+           codon. Sequence names have been written to a report file.
+2024-12-15 12:18:41,628 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    No problems found in target file!
+2024-12-15 12:18:41,628 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    A target file report has been written to:
+2024-12-15 12:18:41,629 - assemble.py - hybpiper.assemble - main - INFO - [INFO]:    Output will be written to the directory: /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast
+2024-12-15 12:18:41,629 - assemble.py - hybpiper.assemble - blastx - INFO - [INFO]:    Making protein blastdb in current directory.
+2024-12-15 12:18:41,629 - assemble.py - hybpiper.assemble - blastx - DEBUG - File /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/translated_target_file.fasta already in sample directory.
+2024-12-15 12:18:41,629 - assemble.py - hybpiper.assemble - blastx - INFO - [CMD]:     makeblastdb -dbtype prot -in translated_target_file.fasta
+2024-12-15 12:18:41,817 - assemble.py - hybpiper.assemble - blastx - DEBUG - makeblastdb check_returncode() is: None
+2024-12-15 12:18:41,817 - assemble.py - hybpiper.assemble - blastx - DEBUG - makeblastdb stdout is: 
+
+Building a new DB, current time: 12/15/2024 12:18:41
+New DB name:   /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/translated_target_file.fasta
+New DB title:  translated_target_file.fasta
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 42 sequences in 0.00442314 seconds.
+
+
+
+2024-12-15 12:18:41,817 - assemble.py - hybpiper.assemble - blastx - DEBUG - makeblastdb stderr is: 
+2024-12-15 12:18:41,818 - assemble.py - hybpiper.assemble - blastx - INFO - [CMD]:     cat /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_1.fq | awk '{if(NR % 4 == 1 || NR %
+           4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64 -k --block 200K --recstart
+           '>' --pipe 'blastx -db translated_target_file.fasta -query - -evalue 0.01
+           -outfmt 6 -max_target_seqs 10' >>
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.blastx
+2024-12-15 12:19:01,784 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired check_returncode() is: None
+2024-12-15 12:19:01,784 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stdout is: 
+2024-12-15 12:19:01,784 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stderr is: 
+2024-12-15 12:19:01,785 - assemble.py - hybpiper.assemble - blastx - INFO - [CMD]:     cat /media/lokdeep/sdf/BUDDHA/Hybpiper_SAMD9-9L/
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_2.fq | awk '{if(NR % 4 == 1 || NR %
+           4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64 -k --block 200K --recstart
+           '>' --pipe 'blastx -db translated_target_file.fasta -query - -evalue 0.01
+           -outfmt 6 -max_target_seqs 10' >>
+           XM_003771945.4_XM_031940019.1-SRR5055303-6_blast.blastx
+2024-12-15 12:19:22,449 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired check_returncode() is: None
+2024-12-15 12:19:22,450 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stdout is: 
+2024-12-15 12:19:22,450 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stderr is: 
+2024-12-15 12:19:22,450 - distribute_reads_to_targets.py - hybpiper.assemble.hybpiper.distribute_reads_to_targets - read_sorting_blastx - INFO - [INFO]:    Gathering IDs for mapped reads...
+2024-12-15 12:19:22,563 - assemble.py - hybpiper.assemble - distribute_blastx - INFO - [INFO]:    In total, 4308 reads from the paired-end read files will be distributed to gene directories
+2024-12-15 12:19:22,567 - distribute_reads_to_targets.py - hybpiper.assemble.hybpiper.distribute_reads_to_targets - distribute_reads - INFO - [NOTE]:    Distributing paired reads to gene directories
+2024-12-15 12:19:22,799 - distribute_targets.py - hybpiper.assemble.hybpiper.distribute_targets - distribute_targets - INFO - [NOTE]:    0 genes had no good matches.
+2024-12-15 12:19:22,801 - assemble.py - hybpiper.assemble - spades - DEBUG - args.merged is: False
+2024-12-15 12:19:22,801 - assemble.py - hybpiper.assemble - spades - DEBUG - args.unpaired is: False
+2024-12-15 12:19:22,801 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - INFO - [NOTE]:    Running initial SPAdes assemblies for 2 genes with reads...
+2024-12-15 12:19:22,801 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - INFO - [INFO]:    See file "spades_initial_commands.txt" for a list of SPAdes commands
+2024-12-15 12:19:25,643 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - DEBUG - spades_cmd check_returncode() is: None
+2024-12-15 12:19:25,644 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - DEBUG - spades_cmd stdout is: 
+2024-12-15 12:19:25,645 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - INFO - [WARNING]: Total number of genes with failed initial SPAdes run: 0. Gene names can be found in the sample log file.
+2024-12-15 12:19:25,645 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - DEBUG - 
+
+2024-12-15 12:19:25,645 - assemble.py - hybpiper.assemble - spades - INFO - [INFO]:    Finished running initial SPAdes assemblies for all genes with reads!
+2024-12-15 12:19:25,645 - assemble.py - hybpiper.assemble - spades - DEBUG - Deleting SPAdes assembly folder for gene SAMD9.
+2024-12-15 12:19:25,651 - assemble.py - hybpiper.assemble - spades - DEBUG - Deleting SPAdes assembly folder for gene SAMD9L.
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - no_intronerate is: False
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - extract_contigs_timeout is: 120
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - trim_hit_sliding_window_size is: 5
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - trim_hit_sliding_window_thresh is: 75
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_skip_frameshifts is: False
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_skip_internal_stops is: False
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_skip_terminal_stops is: False
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_refine_full is: False
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - chimera_check is: False
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - stitched_contig_pad_n is: True
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_multiprocessing pool_threads is: 64
+2024-12-15 12:19:25,654 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - INFO - [INFO]:    Running exonerate_hits for 2 genes...
+2024-12-15 12:19:29,862 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,254 - assemble.py - SAMD9L - exonerate - DEBUG - prefix is: SAMD9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,254 - assemble.py - SAMD9L - exonerate - DEBUG - perform_stitched_contig_chimera_test is: True
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,255 - assemble.py - SAMD9L - exonerate - DEBUG - path_to_interleaved_fasta is: SAMD9L/SAMD9L_interleaved.fasta
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,256 - exonerate_hits.py - SAMD9L - initial_exonerate - DEBUG - Exonerate command is: exonerate -m protein2genome --showalignment yes --showvulgar no -V 0 --ryo ">%ti,%qi,%qab,%qae,%pi,(%tS),%tab,%tae\n%tcs\n" SAMD9L/SAMD9L_target.fasta SAMD9L/SAMD9L_contigs.fasta > SAMD9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/exonerate_results.fasta
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,623 - exonerate_hits.py - SAMD9L - initial_exonerate - DEBUG - Exonerate ran without --refine
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,657 - exonerate_hits.py - SAMD9L - parse_exonerate_and_get_stitched_contig - DEBUG - no_stitched_contig is: False
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,658 - exonerate_hits.py - SAMD9L - _parse_searchio_object - DEBUG - Number of HSPs before filtering via percent_similarity: 4
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,658 - exonerate_hits.py - SAMD9L - _parse_searchio_object - DEBUG - Number of HSPs after filtering via percent_similarity: 3
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,701 - assemble.py - SAMD9L - exonerate - DEBUG - Running intronerate
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,701 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - no_padding_supercontigs: False
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,706 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Set of SPAdes contigs with Exonerate  hits that occur consecutively with respect to the protein query: set()
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,706 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - No trimming performed for NODE_1_length_5554_cov_37.090013,Thylacinus_cynocephalus-SAMD9L,0,1586,98.74,(1),338,5085, or trimming is <= 9 bases. Adding whole SPAdes contig to list! three_prime_bases_trimmed is: N/A
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,707 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Intronerate run of Exonerate for gff will be run using SAMD9L_supercontig.fasta
+2024-12-15 12:19:29,863 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,708 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Intronerate run of Exonerate for gff with --refine: exonerate -m protein2genome -q SAMD9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/intronerate/intronerate_query_stripped.fasta -t SAMD9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/intronerate/SAMD9L_supercontig.fasta --verbose 0 --showalignment yes --showvulgar no --refine full --showtargetgff yes > SAMD9L/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/intronerate/SAMD9L_intronerate_fasta_and_gff.txt
+2024-12-15 12:19:29,864 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,842 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Exonerate with "--refine" check_returncode() is: None
+2024-12-15 12:19:29,864 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,843 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Exonerate with "--refine" stdout is:
+2024-12-15 12:19:29,864 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,843 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Exonerate with "--refine" stderr is:
+2024-12-15 12:19:29,864 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,843 - exonerate_hits.py - SAMD9L - intronerate - DEBUG - Exonerate run for Intronerate ran with --refine
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,258 - assemble.py - SAMD9 - exonerate - DEBUG - prefix is: SAMD9/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,258 - assemble.py - SAMD9 - exonerate - DEBUG - perform_stitched_contig_chimera_test is: True
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,258 - assemble.py - SAMD9 - exonerate - DEBUG - path_to_interleaved_fasta is: SAMD9/SAMD9_interleaved.fasta
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,260 - exonerate_hits.py - SAMD9 - initial_exonerate - DEBUG - Exonerate command is: exonerate -m protein2genome --showalignment yes --showvulgar no -V 0 --ryo ">%ti,%qi,%qab,%qae,%pi,(%tS),%tab,%tae\n%tcs\n" SAMD9/SAMD9_target.fasta SAMD9/SAMD9_contigs.fasta > SAMD9/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/exonerate_results.fasta
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,520 - exonerate_hits.py - SAMD9 - initial_exonerate - DEBUG - Exonerate ran without --refine
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,569 - exonerate_hits.py - SAMD9 - parse_exonerate_and_get_stitched_contig - DEBUG - no_stitched_contig is: False
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,570 - exonerate_hits.py - SAMD9 - _parse_searchio_object - DEBUG - Number of HSPs before filtering via percent_similarity: 4
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,570 - exonerate_hits.py - SAMD9 - _parse_searchio_object - DEBUG - Number of HSPs after filtering via percent_similarity: 3
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,600 - assemble.py - SAMD9 - exonerate - DEBUG - Running intronerate
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,600 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - no_padding_supercontigs: False
+2024-12-15 12:19:29,896 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,609 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Set of SPAdes contigs with Exonerate  hits that occur consecutively with respect to the protein query: set()
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,609 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - No trimming performed for NODE_2_length_5439_cov_38.279560,Thylacinus_cynocephalus-SAMD9,0,1583,99.94,(-1),276,5025, or trimming is <= 9 bases. Adding whole SPAdes contig to list! three_prime_bases_trimmed is: N/A
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,610 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Intronerate run of Exonerate for gff will be run using SAMD9_supercontig.fasta
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:26,610 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Intronerate run of Exonerate for gff with --refine: exonerate -m protein2genome -q SAMD9/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/intronerate/intronerate_query_stripped.fasta -t SAMD9/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/intronerate/SAMD9_supercontig.fasta --verbose 0 --showalignment yes --showvulgar no --refine full --showtargetgff yes > SAMD9/XM_003771945.4_XM_031940019.1-SRR5055303-6_blast/intronerate/SAMD9_intronerate_fasta_and_gff.txt
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,882 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Exonerate with "--refine" check_returncode() is: None
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,882 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Exonerate with "--refine" stdout is:
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,882 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Exonerate with "--refine" stderr is:
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,882 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Exonerate run for Intronerate ran with --refine
+2024-12-15 12:19:29,897 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-15 12:19:29,893 - exonerate_hits.py - SAMD9 - intronerate - DEBUG - Sequence for gene SAMD9 is derived from a single Exonerate hit with no introns - only a supercontig sequence will be recovered (i.e. no "introns.fasta" file) will be recovered
+2024-12-15 12:19:30,464 - assemble.py - hybpiper.assemble - main - INFO - 
+[INFO]:    Generated sequences from 2 genes!
+2024-12-15 12:19:30,464 - assemble.py - hybpiper.assemble - main - WARNING - [WARNING]: 1 genes contain internal stop codons. See file
+           "XM_003771945.4_XM_031940019.1-SRR5055303-6_blast_genes_with_non_terminal_stop_
+           codons.txt" for a list of gene names, and visit the wiki at the following link
+           to view troubleshooting recommendations:
+           https://github.com/mossmatters/HybPiper/wiki/Troubleshooting,-common-issues,-and-recommendations#31-sequences-containing-stop-codons
+2024-12-15 12:19:30,465 - assemble.py - hybpiper.assemble - main - INFO - [WARNING]: Potential long paralogs detected for 0 genes!
+2024-12-15 12:19:30,466 - assemble.py - hybpiper.assemble - main - INFO - [WARNING]: Potential paralogs detected via contig depth for 0 genes!
+2024-12-15 12:19:30,466 - assemble.py - hybpiper.assemble - main - INFO - 
+Finished running "hybpiper assemble" for sample XM_003771945.4_XM_031940019.1-SRR5055303-6_blast!
+
