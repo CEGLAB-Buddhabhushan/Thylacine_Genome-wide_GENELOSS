@@ -1,0 +1,6 @@
+library(ape)
+a <- read.tree("Species.no_internodes.nwk")
+tip<-c("Antechinus_flavipes","Dasyurus_viverrinus","Gracilinanus_agilis","Myrmecobius_fasciatus","Sarcophilus_harrisii","Sminthopsis_crassicaudata")
+b <- keep.tip(a, tip)
+c<-unroot(b)
+write.tree(c, "transcriptID.tree")
