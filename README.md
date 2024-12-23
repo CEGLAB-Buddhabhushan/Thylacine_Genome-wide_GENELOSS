@@ -19,7 +19,7 @@ ________________________________________________________________________________
 - (c) Expression of lost genes in Devil and Dunnart transcriptome. **(Figure 3c)**
 - **Gene_Tree_SAMD9-9L:** Contains the alignment and tree files used to obtain gene trees. **(figure S3)**
 - **Hybpiper_patchwork:** Contains the input files for Hybpiper and patchwork. The subset of fastq reads gives hits (BLASTn) to lost genes (as s query sequences).
-- **Hybpiper_SAMD9-9L:**  In-frame stop codon in _SAMD9L_ reassessed using short-read data of thylacine, using _SAMD9/9L_codding sequence of other 20 marsupial species.
+- **Hybpiper_SAMD9-9L:**  In-frame stop codon in _SAMD9L_ reassessed using short-read data of thylacine, using _SAMD9_/_9L_codding sequence of other 20 marsupial species.
 - **IGV_reports-BWA+BLASTn:**  Contains the IGV-reports for clearly lost genes in chromosome-wise folders **(Figure 1)**
 - **Loss_confirmation:** Contains the output files of short-read BLASTn, bam-read count, and gene-loss events found by TOGA to generate a summary table and confirm gene loss. **(Figure 1, table S1)**
 - **Main_Figures:** contains the main figures in PNG and JPG formats.
