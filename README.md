@@ -10,22 +10,25 @@ Computational Evolutionary Genomics Lab, Department of Biological Sciences, IISE
 
 
 **Folder Structure**
-- **Birds:** Contains the raw files for long read assembly verification, BLASTn results, Circos plot, Galliformes specific deletion, Passeriforme specific deletion, and TOGA output. **(Fig. 5-7)**
-- **Crocodilia:** Contains the raw read blastn result for the _CXCR6_ gene in crocodiles, assembly verification, and lineage-specific evolutionary analysis result output files. **(Fig. 5)**
-- **CSUBST:** Contains the input and output files of CSUBST (Combinatorial SUBSTitutions ). **(Fig. 3)**
-- **CXCR6_clade_wise_mol_evo_analysis:** Selection pressure analysis of _CXCR6_ gene across clades, tested using RELAX, codeML, MEME, FEL, aBSREL, BUSTED, and gBGC. **(Fig. 5, Fig. 7)**
-- **Elapidae:** Contains the raw read blastn result for the _CXCR6_ gene in snakes, assembly verification, and lineage-specific evolutionary analysis result output files and TOGA output files. **(Fig. 5)**
-- **Main_figures:** Contains the main and abstract figures and the inputs required to get figures like phylogenetic trees from TimeTree and iTOLs. **(Fig. 1-8, supplementary figures)**
-- **GC-content:**  Clade wise GC content and G/C strenches. **(Fig. 1)**
-- **Gene_Divergence:**  Sequence divergence of _CXCL16_ and _CXCR6_ across the key species form vertebrate lineages (_TNF-α_ and _LAT_ gene, which reported to be missing but later found, used for comparison) **(Fig. 1)**
-- **GPCRsignal:** Contains the output files of short MD simulations. **(Fig. 4)**
-- **ITGAE:** contains the TOGA output for birds, Chicken gene loss confirmation results, and Expression files.
-- **LOW_quality_verification:** Verification of low-quality protein note comment.
-- **PRECOGx:** Input and output of PRECOGx, a machine learning predictor of GPCR interactions with G-protein and β-arrestin.
-- **Synteny:**  Contains the NCBI synteny images for _CXCR6_ and _CXCL16_. **(Fig. 1)**
-- **Transcriptome_analysis:** Contains an IGV screenshot for the _CXCR6_ gene. 
-- **Verebrates_MSA:**  Contains the MSA files and region specific screenshot such H3C region and terminal region of _CXCR6_ gene. Also, it contains the output of EMBOSS Pepstats and Pepinfo. **(Fig. 2)**
-- **sc-RNA_seq:** Contains the screenshot from SPEED atlas and Seurat scripts for chicken, mallard, and pigeon single-cell RNA seq comparison. **(Fig. 8)**
+- **Chromosome_wise_Chains_and_TOGA_results:** Contains the output files of make_lastz_chains and TOGA.
+- **Figure1:** Contains the gene loss confirmation genes losses in thylacine and other marsupial species, IGV-reports, and gene loss history. **(Figure 1, figure S2, figure S5, figure S6, figure S7 and figure S8)**
+- **Figure2:** Contains the figure 2 figures and the inputs required to get figures like phylogenetic trees from TimeTree and iTOLs. **(Figure 2)**
+- **Figure3:**
+- (a) Contains the input and output files of GC-content variation in thylacine. **(Figure 3a)**
+- (b) Selection pressure analysis of "clearly lost" genes (found using TOGA), tested using RELAX. **(Figure 3b)**
+- (c) Expression of lost genes in Devil and Dunnart transcriptome. **(Figure 3c)**
+- **Gene_Tree_SAMD9-9L:** Contains the alignment and tree files used to obtain gene trees. **(figure S3)**
+- **Hybpiper_patchwork:** Contains the input files for Hybpiper and patchwork. The subset of fastq reads gives hits (BLASTn) to lost genes (as s query sequences).
+- **Hybpiper_SAMD9-9L:**  In-frame stop codon in _SAMD9L_ reassessed using short-read data of thylacine, using _SAMD9/9L_codding sequence of other 20 marsupial species.
+- **IGV_reports-BWA+BLASTn:**  Contains the IGV-reports for clearly lost genes in chromosome-wise folders **(Figure 1)**
+- **Loss_confirmation:** Contains the output files of short-read BLASTn, bam-read count, and gene-loss events found by TOGA to generate a summary table and confirm gene loss. **(Figure 1, table S1)**
+- **Main_Figures:** contains the main figures in PNG and JPG formats.
+- **Myrmecobius_fasciatus_RNA_seq:** Contains an IGV screenshot for the _VWA7_ gene, subseted bam files, and BED files. **(figure S9)**
+- **PAML_omega_SAMD9-9L:** Evolutionary rate dN/dS ratio (omega) across the _SAMD9_ and _SAMD9L_ genes. Contains the input and R script. **(figure S4)**
+- **Selection_analysis:**  Selection pressure analysis of lost gene across 21 marsupial species, tested using RELAX, codeML, MEME, FEL, aBSREL, BUSTED, and gBGC.  **(Figure 3 and table S5)**
+- **Thylacine_transcriptome-miRNA:** Contains BLASTn search output for lost genes and control genes in the miRNA database of thylacine.
+- **TOGA_output_sorted:** Contains the sorted output files of TOGA, such as inact_mut_data.txt and loss_summ_data.tsv, codon.fasta, nucleotide.fasta.tgz, prot.fasta, query_annotation.bed, and query_gene_spans.bed. Also, a mutation plot was generated using TOGA. **(Figure 1)**
+- **Synteny:** Contains the NCBI synteny images for _SAMD9L_, _HSD17B13_, _CUZD1_ and _VWA7_. **(figure S5 and tables S2)**
 ____________________________________________________________________________________________________________________________________________________
 **Prerequisites:**
 - TOGA (1.1.7)
