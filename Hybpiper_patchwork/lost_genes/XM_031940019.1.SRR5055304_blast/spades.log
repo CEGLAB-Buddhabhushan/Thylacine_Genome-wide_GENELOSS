@@ -1,0 +1,145 @@
+
+
+== Warning ==  No assembly mode was specified! If you intend to assemble high-coverage multi-cell/isolate data, use '--isolate' option.
+
+
+Command line: /home/bbgs/miniconda3/envs/hybpiper/bin/spades.py	--memory	1024	--only-assembler	--threads	1	--cov-cutoff	8	--12	/media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_interleaved.fasta	-o	/media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades	
+
+System information:
+  SPAdes version: 3.15.5
+  Python version: 3.8.19
+  OS: Linux-5.15.0-97-generic-x86_64-with-glibc2.17
+
+Output dir: /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades
+Mode: ONLY assembling (without read error correction)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: ['/media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_interleaved.fasta']
+      single reads: not specified
+      merged reads: not specified
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned ON and threshold is 8.000000
+Other parameters:
+  Dir for temp files: /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/tmp
+  Threads: 1
+  Memory limit (in Gb): 1024
+
+
+======= SPAdes pipeline started. Log can be found here: /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/spades.log
+
+/media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_interleaved.fasta: max reads length: 100
+
+Reads length: 100
+
+
+===== Before start started. 
+
+
+===== Preprocess reads started. 
+
+
+===== Preprocess reads finished. 
+
+
+===== Assembling started. 
+
+
+===== K21 started. 
+
+
+== Running: /home/bbgs/miniconda3/envs/hybpiper/bin/spades-core /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/K21/configs/config.info
+
+  0:00:00.000     1M / 17M   INFO    General                 (main.cpp                  :  99)   Loaded config from /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/K21/configs/config.info
+  0:00:00.000     1M / 17M   INFO    General                 (memory_limit.cpp          :  54)   Memory limit set to 1024 Gb
+  0:00:00.000     1M / 17M   INFO    General                 (main.cpp                  : 107)   Starting SPAdes, built from N/A, git revision N/A
+  0:00:00.000     1M / 17M   INFO    General                 (main.cpp                  : 108)   Maximum k-mer length: 128
+  0:00:00.000     1M / 17M   INFO    General                 (main.cpp                  : 109)   Assembling dataset (/media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/dataset.info) with K=21
+  0:00:00.000     1M / 17M   INFO    General                 (main.cpp                  : 110)   Maximum # of threads to use (adjusted due to OMP capabilities): 1
+  0:00:00.000     1M / 17M   INFO    General                 (pipeline.cpp              : 212)   SPAdes started
+  0:00:00.000     1M / 17M   INFO    General                 (pipeline.cpp              : 225)   Starting from stage: read_conversion
+  0:00:00.000     1M / 17M   INFO    General                 (pipeline.cpp              : 231)   Two-step repeat resolution disabled
+  0:00:00.000     1M / 17M   INFO   GraphCore                (graph_core.hpp            : 672)   Graph created, vertex min_id: 3, edge min_id: 3
+  0:00:00.000     1M / 17M   INFO   GraphCore                (graph_core.hpp            : 673)   Vertex size: 48, edge size: 40
+  0:00:00.000     1M / 17M   INFO    General                 (edge_index.hpp            : 113)   Size of edge index entries: 12/8
+  0:00:00.000     1M / 17M   INFO   StageManager             (stage.cpp                 : 185)   STAGE == Binary Read Conversion (id: read_conversion)
+  0:00:00.000     1M / 17M   INFO    General                 (read_converter.cpp        :  72)   Converting reads to binary format for library #0 (takes a while)
+  0:00:00.000     1M / 17M   INFO    General                 (read_converter.cpp        :  73)   Converting paired reads
+  0:00:00.001    23M / 23M   INFO    General                 (binary_converter.cpp      : 111)   106 reads written
+  0:00:00.001     1M / 17M   INFO    General                 (read_converter.cpp        :  86)   Converting single reads
+  0:00:00.001    11M / 17M   INFO    General                 (binary_converter.cpp      : 111)   0 reads written
+  0:00:00.001     1M / 17M   INFO    General                 (read_converter.cpp        :  92)   Converting merged reads
+  0:00:00.001    11M / 17M   INFO    General                 (binary_converter.cpp      : 111)   0 reads written
+  0:00:00.001     1M / 17M   INFO   StageManager             (stage.cpp                 : 185)   STAGE == de Bruijn graph construction (id: construction)
+  0:00:00.001     1M / 17M   INFO    General                 (construction.cpp          : 153)   Max read length 100
+  0:00:00.001     1M / 17M   INFO    General                 (construction.cpp          : 159)   Average read length 99.8868
+  0:00:00.001     1M / 17M   INFO    General                 (stage.cpp                 : 117)   PROCEDURE == k+1-mer counting (id: construction:kpomer_counting)
+  0:00:00.001     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 243)   Splitting kmer instances into 10 files using 1 threads. This might take a while.
+  0:00:00.001     1M / 17M   INFO    General                 (file_limit.hpp            :  42)   Open file limit set to 1024
+  0:00:00.001     1M / 17M   INFO    General                 (kmer_splitter.hpp         :  93)   Memory available for splitting buffers: 341.333 Gb
+  0:00:00.001     1M / 17M   INFO    General                 (kmer_splitter.hpp         : 101)   Using cell size of 6710886
+  0:00:00.005     1M / 17M   INFO    General                 (kmer_splitters.hpp        : 131)   Used 424 reads
+  0:00:00.005     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 249)   Starting k-mer counting.
+  0:00:00.006     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 260)   K-mer counting done. There are 6161 kmers in total.
+  0:00:00.006     1M / 17M   INFO    General                 (stage.cpp                 : 117)   PROCEDURE == Extension index construction (id: construction:extension_index_construction)
+  0:00:00.006     1M / 17M   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 438)   Building kmer index
+  0:00:00.006     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 243)   Splitting kmer instances into 10 files using 1 threads. This might take a while.
+  0:00:00.006     1M / 17M   INFO    General                 (file_limit.hpp            :  42)   Open file limit set to 1024
+  0:00:00.007     1M / 17M   INFO    General                 (kmer_splitter.hpp         :  93)   Memory available for splitting buffers: 341.333 Gb
+  0:00:00.007     1M / 17M   INFO    General                 (kmer_splitter.hpp         : 101)   Using cell size of 6710886
+  0:00:00.009   601M / 601M  INFO    General                 (kmer_splitters.hpp        : 194)   Processed 6161 kmers
+  0:00:00.009   601M / 601M  INFO    General                 (kmer_splitters.hpp        : 199)   Used 6161 kmers.
+  0:00:00.009     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 249)   Starting k-mer counting.
+  0:00:00.011     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 260)   K-mer counting done. There are 6155 kmers in total.
+  0:00:00.011     1M / 17M   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 395)   Building perfect hash indices
+  0:00:00.012     1M / 17M   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 431)   Index built. Total 6155 kmers, 12200 bytes occupied (15.857 bits per kmer).
+  0:00:00.012     1M / 17M   INFO    General                 (kmer_index_builder.hpp    : 169)   Merging final buckets.
+  0:00:00.012     1M / 17M   INFO   DeBruijnExtensionIndexBu (kmer_extension_index_build: 100)   Building k-mer extensions from k+1-mers
+  0:00:00.014     1M / 17M   INFO   DeBruijnExtensionIndexBu (kmer_extension_index_build: 105)   Building k-mer extensions from k+1-mers finished.
+  0:00:00.014     1M / 17M   INFO    General                 (stage.cpp                 : 117)   PROCEDURE == Early tip clipping (id: construction:early_tip_clipper)
+  0:00:00.014     1M / 17M   INFO    General                 (construction.cpp          : 301)   Early tip clipper length bound set as (RL - K)
+  0:00:00.014     1M / 17M   INFO   Early tip clipping       (early_simplification.hpp  :  47)   Early tip clipping
+  0:00:00.015     1M / 17M   INFO   Early tip clipping       (early_simplification.hpp  :  82)   #tipped junctions: 22
+  0:00:00.015     1M / 17M   INFO   Early tip clipping       (early_simplification.hpp  :  93)   Clipped tips: 22
+  0:00:00.015     1M / 17M   INFO   Early tip clipping       (early_simplification.hpp  :  49)   354 22-mers were removed by early tip clipper
+  0:00:00.015     1M / 17M   INFO    General                 (stage.cpp                 : 117)   PROCEDURE == Condensing graph (id: construction:graph_condensing)
+  0:00:00.015     1M / 17M   INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 354)   Extracting unbranching paths
+  0:00:00.017     1M / 17M   INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 373)   Extracting unbranching paths finished. 84 sequences extracted
+  0:00:00.018     1M / 17M   INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 309)   Collecting perfect loops
+  0:00:00.019     1M / 17M   INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 342)   Collecting perfect loops finished. 0 loops collected
+  0:00:00.019     1M / 17M   INFO    General                 (debruijn_graph_constructor: 487)   Total 168 edges to create
+  0:00:00.019     1M / 17M   INFO    General                 (debruijn_graph_constructor: 489)   Collecting link records
+  0:00:00.019     1M / 17M   INFO    General                 (debruijn_graph_constructor: 491)   Ordering link records
+  0:00:00.019     1M / 17M   INFO    General                 (debruijn_graph_constructor: 493)   Sorting done
+  0:00:00.019     1M / 17M   INFO    General                 (debruijn_graph_constructor: 503)   Total 78 vertices to create
+  0:00:00.019     1M / 17M   INFO    General                 (debruijn_graph_constructor: 506)   Connecting the graph
+  0:00:00.019     1M / 17M   INFO    General                 (stage.cpp                 : 117)   PROCEDURE == Filling coverage indices (PHM) (id: construction:coverage_filling_phm)
+  0:00:00.019     1M / 17M   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 395)   Building perfect hash indices
+  0:00:00.020     1M / 17M   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 431)   Index built. Total 6161 kmers, 12176 bytes occupied (15.8104 bits per kmer).
+  0:00:00.020     1M / 17M   INFO    General                 (coverage_hash_map_builder.:  47)   Collecting k-mer coverage information from reads, this takes a while.
+  0:00:00.022     1M / 17M   INFO    General                 (construction.cpp          : 430)   Filling coverage and flanking coverage from PHM
+  0:00:00.024     1M / 17M   INFO   StageManager             (stage.cpp                 : 185)   STAGE == EC Threshold Finding (id: ec_threshold_finder)
+  0:00:00.024     1M / 17M   ERROR   General                 (kmer_coverage_model.cpp   : 187)   Invalid kmer coverage histogram, make sure that the coverage is indeed uniform
+
+
+== Error ==  system call for: "['/home/bbgs/miniconda3/envs/hybpiper/bin/spades-core', '/media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/K21/configs/config.info']" finished abnormally, OS return value: 21
+None
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+
+SPAdes log can be found here: /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_031940019.1.SRR5055304_blast/XM_031940019.1/XM_031940019.1_spades/spades.log
+
+Thank you for using SPAdes!

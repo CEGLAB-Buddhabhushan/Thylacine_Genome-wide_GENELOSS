@@ -1,0 +1,146 @@
+2024-12-07 07:00:25,645 - assemble.py - hybpiper.assemble - assemble - INFO - [INFO]:    HybPiper version 2.1.7 was called with these arguments:
+2024-12-07 07:00:25,645 - assemble.py - hybpiper.assemble - assemble - INFO -            /home/bbgs/miniconda3/envs/hybpiper/bin/hybpiper assemble -r
+           XM_003771946.4.SRR5055306_1.fq XM_003771946.4.SRR5055306_2.fq -t_dna
+           XM_003771946.4.fa --prefix XM_003771946.4.SRR5055306_blast --evalue 0.05 --cpu
+           64
+
+2024-12-07 07:00:25,645 - assemble.py - hybpiper.assemble - assemble - DEBUG - Namespace(bbmap_memory=1000, bbmap_subfilter=7, bbmap_threads=1, blast=True, bwa=False, chimeric_stitched_contig_discordant_reads_cutoff=5, chimeric_stitched_contig_edit_distance=5, cov_cutoff=8, cpu=64, depth_multiplier=10, diamond=False, diamond_sensitivity=False, distribute_low_mem=False, evalue=0.05, exclude=None, exonerate_hit_sliding_window_size=3, exonerate_hit_sliding_window_thresh=55, func=<function assemble at 0x7f5daf33aaf0>, keep_intermediate_files=False, kvals=None, max_target_seqs=10, merged=False, no_intronerate=False, no_padding_supercontigs=False, no_stitched_contig=False, output_folder=None, paralog_min_length_percentage=0.75, prefix='XM_003771946.4.SRR5055306_blast', readfiles=['XM_003771946.4.SRR5055306_1.fq', 'XM_003771946.4.SRR5055306_2.fq'], run_profiler=False, spades_single_cell=False, start_from='map_reads', target=None, targetfile_aa=False, targetfile_dna='XM_003771946.4.fa', thresh=55, timeout_assemble=0, timeout_exonerate_contigs=120, unpaired=False, verbose_logging=False)
+2024-12-07 07:00:25,645 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - uname:     uname_result(system='Linux', node='morpheus-OptiPlex-5050', release='5.15.0-97-generic', version='#107~20.04.1-Ubuntu SMP Fri Feb 9 14:20:11 UTC 2024', machine='x86_64', processor='x86_64')
+2024-12-07 07:00:25,645 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - system:    Linux
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - node:      morpheus-OptiPlex-5050
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - release:   5.15.0-97-generic
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - version:   #107~20.04.1-Ubuntu SMP Fri Feb 9 14:20:11 UTC 2024
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - machine:   x86_64
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_platform_info - DEBUG - processor: x86_64
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum core file size            (RLIMIT_CORE    ) :                    0                   -1
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum CPU time                  (RLIMIT_CPU     ) :                   -1                   -1
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum file size                 (RLIMIT_FSIZE   ) :                   -1                   -1
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum heap size                 (RLIMIT_DATA    ) :                   -1                   -1
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum stack size                (RLIMIT_STACK   ) :              8388608                   -1
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum resident set size         (RLIMIT_RSS     ) :                   -1                   -1
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum number of processes       (RLIMIT_NPROC   ) :              2062847              2062847
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum number of open files      (RLIMIT_NOFILE  ) :                 1024              1048576
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - get_ulimit_info - DEBUG - Maximum lockable memory address   (RLIMIT_MEMLOCK ) :             67108864             67108864
+2024-12-07 07:00:25,646 - assemble.py - hybpiper.assemble - assemble - INFO - [INFO]:    Using 64 cpus/threads.
+2024-12-07 07:00:25,646 - assemble.py - hybpiper.assemble - assemble - DEBUG - args.start_from is: map_reads
+2024-12-07 07:00:25,646 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    Checking for external dependencies:
+
+2024-12-07 07:00:25,647 - utils.py - hybpiper.assemble - log_or_print - INFO - blastx               found at /home/bbgs/miniconda3/envs/hybpiper/bin/blastx
+2024-12-07 07:00:25,647 - utils.py - hybpiper.assemble - log_or_print - INFO - exonerate            found at /home/bbgs/miniconda3/envs/hybpiper/bin/exonerate
+2024-12-07 07:00:25,707 - utils.py - hybpiper.assemble - log_or_print - INFO - parallel             found at /home/bbgs/miniconda3/envs/hybpiper/bin/parallel
+2024-12-07 07:00:25,707 - utils.py - hybpiper.assemble - log_or_print - INFO - makeblastdb          found at /home/bbgs/miniconda3/envs/hybpiper/bin/makeblastdb
+2024-12-07 07:00:25,707 - utils.py - hybpiper.assemble - log_or_print - INFO - spades.py            found at /home/bbgs/miniconda3/envs/hybpiper/bin/spades.py
+2024-12-07 07:00:25,707 - utils.py - hybpiper.assemble - log_or_print - INFO - bwa                  found at /home/bbgs/miniconda3/envs/hybpiper/bin/bwa
+2024-12-07 07:00:25,708 - utils.py - hybpiper.assemble - log_or_print - INFO - samtools             found at /home/bbgs/miniconda3/envs/hybpiper/bin/samtools
+2024-12-07 07:00:25,708 - utils.py - hybpiper.assemble - log_or_print - INFO - bbmap.sh             found at /home/bbgs/miniconda3/envs/hybpiper/bin/bbmap.sh
+2024-12-07 07:00:25,708 - utils.py - hybpiper.assemble - log_or_print - INFO - bbmerge.sh           found at /home/bbgs/miniconda3/envs/hybpiper/bin/bbmerge.sh
+2024-12-07 07:00:25,708 - utils.py - hybpiper.assemble - log_or_print - INFO - diamond              found at /home/bbgs/miniconda3/envs/hybpiper/bin/diamond
+2024-12-07 07:00:25,708 - utils.py - hybpiper.assemble - log_or_print - INFO - mafft                found at /home/bbgs/miniconda3/envs/hybpiper/bin/mafft
+2024-12-07 07:00:25,708 - utils.py - hybpiper.assemble - log_or_print - INFO - 
+2024-12-07 07:00:25,708 - assemble.py - hybpiper.assemble - assemble - INFO - [INFO]:    Everything looks good!
+2024-12-07 07:00:25,708 - assemble.py - hybpiper.assemble - assemble - DEBUG - Input target file XM_003771946.4.fa exists and is not empty, proceeding...
+2024-12-07 07:00:25,708 - assemble.py - hybpiper.assemble - assemble - DEBUG - The target file XM_003771946.4.fa has been provided, containing DNA sequences
+2024-12-07 07:00:25,709 - assemble.py - hybpiper.assemble - assemble - DEBUG - Input read file /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_003771946.4.SRR5055306_1.fq exists and is not empty, proceeding...
+2024-12-07 07:00:25,709 - assemble.py - hybpiper.assemble - assemble - DEBUG - Input read file /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_003771946.4.SRR5055306_2.fq exists and is not empty, proceeding...
+2024-12-07 07:00:25,709 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    Checking target file FASTA header formatting...
+2024-12-07 07:00:25,710 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    The target file FASTA header formatting looks good!
+2024-12-07 07:00:25,710 - utils.py - hybpiper.assemble - log_or_print - INFO - [INFO]:    The target file contains at least one sequence for 1 unique genes.
+2024-12-07 07:00:25,710 - assemble.py - hybpiper.assemble - check_targetfile - INFO - [WARNING]: You have specified that your target file contains DNA sequences, but BLASTx or
+           DIAMOND has been selected for read mapping. Translating the target file...
+2024-12-07 07:00:25,712 - utils.py - hybpiper.assemble - log_or_print - DEBUG - [INFO]:    There are 1 sequences in your target file that contain a single terminal stop
+           codon. Sequence names can be found in the sample log file (if running "hybpiper
+           assemble") or printed below (if running "hybpiper check_targetfile").
+
+2024-12-07 07:00:25,713 - utils.py - hybpiper.assemble - log_or_print - DEBUG -            Sarcophilus_harrisii-XM_003771946.4
+
+2024-12-07 07:00:25,713 - assemble.py - hybpiper.assemble - check_targetfile - INFO - [INFO]:    Writing a translated target file to: ./XM_003771946.4.SRR5055306_blast/
+           translated_target_file.fasta
+2024-12-07 07:00:25,713 - assemble.py - hybpiper.assemble - assemble - INFO - [INFO]:    Output will be written to the directory: ./XM_003771946.4.SRR5055306_blast
+2024-12-07 07:00:25,713 - assemble.py - hybpiper.assemble - blastx - INFO - [INFO]:    Making protein blastdb in current directory.
+2024-12-07 07:00:25,713 - assemble.py - hybpiper.assemble - blastx - INFO - [CMD]:     makeblastdb -dbtype prot -in translated_target_file.fasta
+2024-12-07 07:00:26,083 - assemble.py - hybpiper.assemble - blastx - DEBUG - makeblastdb check_returncode() is: None
+2024-12-07 07:00:26,084 - assemble.py - hybpiper.assemble - blastx - DEBUG - makeblastdb stdout is: 
+
+Building a new DB, current time: 12/07/2024 07:00:25
+New DB name:   /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/gene_loss_Hybpiper_patchwork/lost_genes/XM_003771946.4.SRR5055306_blast/translated_target_file.fasta
+New DB title:  translated_target_file.fasta
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 1 sequences in 0.000415087 seconds.
+
+
+
+2024-12-07 07:00:26,084 - assemble.py - hybpiper.assemble - blastx - DEBUG - makeblastdb stderr is: 
+2024-12-07 07:00:26,084 - assemble.py - hybpiper.assemble - blastx - INFO - [CMD]:     cat /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/
+           gene_loss_Hybpiper_patchwork/lost_genes/XM_003771946.4.SRR5055306_1.fq | awk
+           '{if(NR % 4 == 1 || NR % 4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64
+           -k --block 200K --recstart '>' --pipe 'blastx -db translated_target_file.fasta
+           -query - -evalue 0.05 -outfmt 6 -max_target_seqs 10' >>
+           XM_003771946.4.SRR5055306_blast.blastx
+2024-12-07 07:00:31,971 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired check_returncode() is: None
+2024-12-07 07:00:31,971 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stdout is: 
+2024-12-07 07:00:31,971 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stderr is: 
+2024-12-07 07:00:31,972 - assemble.py - hybpiper.assemble - blastx - INFO - [CMD]:     cat /media/morpheus/sagar/BUDDHA/Tasmanian_wolf/Hybpiper/
+           gene_loss_Hybpiper_patchwork/lost_genes/XM_003771946.4.SRR5055306_2.fq | awk
+           '{if(NR % 4 == 1 || NR % 4 == 2) {sub(/@/, ">"); print; } }' | parallel -j 64
+           -k --block 200K --recstart '>' --pipe 'blastx -db translated_target_file.fasta
+           -query - -evalue 0.05 -outfmt 6 -max_target_seqs 10' >>
+           XM_003771946.4.SRR5055306_blast.blastx
+2024-12-07 07:00:37,625 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired check_returncode() is: None
+2024-12-07 07:00:37,626 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stdout is: 
+2024-12-07 07:00:37,626 - assemble.py - hybpiper.assemble - blastx - DEBUG - blastx paired stderr is: 
+2024-12-07 07:00:37,627 - distribute_reads_to_targets.py - hybpiper.assemble.hybpiper.distribute_reads_to_targets - read_sorting_blastx - INFO - [INFO]:    Gathering IDs for mapped reads...
+2024-12-07 07:00:37,633 - assemble.py - hybpiper.assemble - distribute_blastx - INFO - [INFO]:    In total, 1468 reads from the paired-end read files will be distributed to gene directories
+2024-12-07 07:00:37,635 - distribute_reads_to_targets.py - hybpiper.assemble.hybpiper.distribute_reads_to_targets - distribute_reads - INFO - [NOTE]:    Distributing paired reads to gene directories
+2024-12-07 07:00:37,671 - distribute_targets.py - hybpiper.assemble.hybpiper.distribute_targets - distribute_targets - INFO - [NOTE]:    0 genes had no good matches.
+2024-12-07 07:00:37,671 - assemble.py - hybpiper.assemble - spades - DEBUG - args.merged is: False
+2024-12-07 07:00:37,672 - assemble.py - hybpiper.assemble - spades - DEBUG - args.unpaired is: False
+2024-12-07 07:00:37,672 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - INFO - [NOTE]:    Running initial SPAdes assemblies for 1 genes with reads...
+2024-12-07 07:00:37,672 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - INFO - [INFO]:    See file "spades_initial_commands.txt" for a list of SPAdes commands
+2024-12-07 07:00:41,620 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - DEBUG - spades_cmd check_returncode() is: None
+2024-12-07 07:00:41,621 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - DEBUG - spades_cmd stdout is: 
+2024-12-07 07:00:41,621 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - INFO - [WARNING]: Total number of genes with failed initial SPAdes run: 0. Gene names can be found in the sample log file.
+2024-12-07 07:00:41,621 - spades_runner.py - hybpiper.assemble.hybpiper.spades_runner - spades_initial - DEBUG - 
+
+2024-12-07 07:00:41,621 - assemble.py - hybpiper.assemble - spades - INFO - [INFO]:    Finished running initial SPAdes assemblies for all genes with reads!
+2024-12-07 07:00:41,621 - assemble.py - hybpiper.assemble - spades - DEBUG - Deleting SPAdes assembly folder for gene XM_003771946.4.
+2024-12-07 07:00:41,631 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - no_intronerate is: False
+2024-12-07 07:00:41,631 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_contigs_timeout is: 120
+2024-12-07 07:00:41,631 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_hit_sliding_window_size is: 3
+2024-12-07 07:00:41,631 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_hit_sliding_window_thresh is: 55
+2024-12-07 07:00:41,631 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - INFO - [INFO]:    Running exonerate_hits for 1 genes...
+2024-12-07 07:00:41,631 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - exonerate_multiprocessing pool_threads is: 64
+2024-12-07 07:00:55,856 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:42,737 - assemble.py - XM_003771946.4 - exonerate - DEBUG - prefix is: XM_003771946.4/XM_003771946.4.SRR5055306_blast
+2024-12-07 07:00:55,856 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:42,737 - assemble.py - XM_003771946.4 - exonerate - DEBUG - perform_stitched_contig_chimera_test is: True
+2024-12-07 07:00:55,856 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:42,737 - assemble.py - XM_003771946.4 - exonerate - DEBUG - path_to_interleaved_fasta is: XM_003771946.4/XM_003771946.4_interleaved.fasta
+2024-12-07 07:00:55,856 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:42,738 - exonerate_hits.py - XM_003771946.4 - initial_exonerate - DEBUG - Exonerate command is: exonerate -m protein2genome --showalignment yes --showvulgar no -V 0 --refine full --ryo ">%ti,%qi,%qab,%qae,%pi,(%tS),%tab,%tae\n%tcs\n" XM_003771946.4/XM_003771946.4_target.fasta XM_003771946.4/XM_003771946.4_contigs.fasta > XM_003771946.4/XM_003771946.4.SRR5055306_blast/exonerate_results.fasta
+2024-12-07 07:00:55,856 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,380 - exonerate_hits.py - XM_003771946.4 - initial_exonerate - DEBUG - Exonerate ran with --refine
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,412 - exonerate_hits.py - XM_003771946.4 - parse_exonerate_and_get_stitched_contig - DEBUG - no_stitched_contig is: False
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,413 - exonerate_hits.py - XM_003771946.4 - _parse_searchio_object - DEBUG - Number of HSPs before filtering via percent_similarity: 2
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,414 - exonerate_hits.py - XM_003771946.4 - _parse_searchio_object - DEBUG - Number of HSPs after filtering via percent_similarity: 2
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,569 - assemble.py - XM_003771946.4 - exonerate - DEBUG - Running intronerate
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,569 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - no_padding_supercontigs: False
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,570 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Set of SPAdes contigs with Exonerate  hits that occur consecutively with respect to the protein query: set()
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,570 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - No trimming performed for NODE_1_length_5429_cov_14.147795,Sarcophilus_harrisii-XM_003771946.4,3,1584,89.37,(1),296,5034, or trimming is <= 9 bases. Adding whole SPAdes contig to list! three_prime_bases_trimmed is: N/A
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,571 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Intronerate run of Exonerate for gff will be run using XM_003771946.4_supercontig.fasta
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:50,571 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Intronerate run of Exonerate for gff with --refine: exonerate -m protein2genome -q XM_003771946.4/XM_003771946.4.SRR5055306_blast/intronerate/intronerate_query_stripped.fasta -t XM_003771946.4/XM_003771946.4.SRR5055306_blast/intronerate/XM_003771946.4_supercontig.fasta --verbose 0 --showalignment yes --showvulgar no --refine full --showtargetgff yes > XM_003771946.4/XM_003771946.4.SRR5055306_blast/intronerate/XM_003771946.4_intronerate_fasta_and_gff.txt
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:55,837 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Exonerate with "--refine" check_returncode() is: None
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:55,837 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Exonerate with "--refine" stdout is:
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:55,837 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Exonerate with "--refine" stderr is:
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:55,838 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Exonerate run for Intronerate ran with --refine
+2024-12-07 07:00:55,857 - assemble.py - hybpiper.assemble - exonerate_multiprocessing - DEBUG - 2024-12-07 07:00:55,838 - exonerate_hits.py - XM_003771946.4 - intronerate - DEBUG - Exonerate ran without --refine
+2024-12-07 07:00:56,419 - assemble.py - hybpiper.assemble - assemble - INFO - 
+[INFO]:    Generated sequences from 1 genes!
+2024-12-07 07:00:56,420 - assemble.py - hybpiper.assemble - assemble - WARNING - 
+2024-12-07 07:00:56,420 - assemble.py - hybpiper.assemble - assemble - WARNING - [WARNING]: 1 genes contain internal stop codons. See file
+           "XM_003771946.4.SRR5055306_blast_genes_with_non_terminal_stop_codons.txt" for a
+           list of gene names, and visit the wiki at the following link to view
+           troubleshooting recommendations.
+           https://github.com/mossmatters/HybPiper/wiki/Troubleshooting,-common-
+           issues,-and-recommendations#31-sequences-containing-stop-codons
+2024-12-07 07:00:56,421 - assemble.py - hybpiper.assemble - assemble - INFO - [WARNING]: Potential long paralogs detected for 0 genes!
+2024-12-07 07:00:56,421 - assemble.py - hybpiper.assemble - assemble - INFO - [WARNING]: Potential paralogs detected via contig depth for 0 genes!
+2024-12-07 07:00:56,421 - assemble.py - hybpiper.assemble - assemble - INFO - 
+Finished running "hybpiper assemble" for sample XM_003771946.4.SRR5055306_blast!
+
