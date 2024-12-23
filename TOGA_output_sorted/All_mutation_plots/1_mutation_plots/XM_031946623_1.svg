@@ -1,0 +1,145 @@
+<svg version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+width="1985" height="100" viewBox = "0 0 1985 100"
+onclick="mouseclick(evt)">
+
+<script type="text/ecmascript">
+
+<![CDATA[
+    function mouseover(evt, target) { 
+    var gv = document.getElementById("globalVariable");
+    var previoustarget = gv.firstChild.nodeValue;
+    if (previoustarget != "none") 
+    {
+        	document.getElementById(gv.firstChild.nodeValue).setAttributeNS(null, "visibility", "hidden");
+    }
+    document.getElementById(target).setAttributeNS(null, "visibility", "visible");
+    gv.firstChild.nodeValue = target;
+        }
+
+    function mouseclick(evt) { 
+    var gv = document.getElementById("globalVariable");
+    var previoustarget = gv.firstChild.nodeValue;
+    if (previoustarget != "none") {
+        	document.getElementById(gv.firstChild.nodeValue).setAttributeNS(null, "visibility", "hidden");
+        }
+    }
+]]>
+  </script>
+<style type="text/css" >
+
+<![CDATA[
+    rect.anc_exon {
+              stroke-width:3;
+                  }
+
+    rect.non_anc_exon {
+              stroke: black; stroke-width:3; stroke-dasharray: 5,5;
+                    }
+
+    text {
+              font-size: 18px;
+              font-family: Courier New;
+          }
+                    ]]>
+</style>
+
+<defs>
+    <text x="150" y="40" id="globalVariable">none</text>
+</defs>
+
+  <rect class="anc_exon" x="0" y="35.0" width="0" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <rect class="anc_exon" x="0" y="35.0" width="112.0" height="30" style="fill:#878787;fill-opacity:1.00" />
+  <line x1="112.0" y1="50.0" x2="132.0" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="132.0" y1="50.0" x2="132.0" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="132.0" y1="50.0" x2="132.0" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="132.0" y1="50.0" x2="152.0" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="152" y="35.0" width="162" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="314" y1="50.0" x2="334" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="334" y1="50.0" x2="334" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="334" y1="50.0" x2="334" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="334" y1="50.0" x2="354" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="354" y="35.0" width="174" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="528" y1="50.0" x2="548" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="548" y1="50.0" x2="548" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="548" y1="50.0" x2="548" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="548" y1="50.0" x2="568" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="568" y="35.0" width="70" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="638" y1="50.0" x2="658" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="658" y1="50.0" x2="658" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="658" y1="50.0" x2="658" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="658" y1="50.0" x2="678" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="678" y="35.0" width="126" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="804" y1="50.0" x2="824" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="824" y1="50.0" x2="824" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="824" y1="50.0" x2="824" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="824" y1="50.0" x2="844" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="844" y="35.0" width="132" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="976" y1="50.0" x2="1016" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1016" y="35.0" width="73" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1089" y1="50.0" x2="1109" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1109" y1="50.0" x2="1109" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1109" y1="50.0" x2="1109" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1109" y1="50.0" x2="1129" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1129" y="35.0" width="62" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1191" y1="50.0" x2="1211" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1211" y1="50.0" x2="1211" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1211" y1="50.0" x2="1211" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1211" y1="50.0" x2="1231" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1231" y="35.0" width="130" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1361" y1="50.0" x2="1381" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1381" y1="50.0" x2="1381" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1381" y1="50.0" x2="1381" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1381" y1="50.0" x2="1401" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1401" y="35.0" width="66" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1467" y1="50.0" x2="1487" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1487" y1="50.0" x2="1487" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1487" y1="50.0" x2="1487" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1487" y1="50.0" x2="1507" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1507" y="35.0" width="158" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1665" y1="50.0" x2="1685" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1685" y1="50.0" x2="1685" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1685" y1="50.0" x2="1685" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1685" y1="50.0" x2="1705" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1705" y="35.0" width="115" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1820" y1="50.0" x2="1860" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1860" y="35.0" width="45" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="1905" y1="50.0" x2="1925" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1925" y1="50.0" x2="1925" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1925" y1="50.0" x2="1925" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="1925" y1="50.0" x2="1945" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="1945" y="35.0" width="4" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <rect class="anc_exon" x="1949" y="35.0" width="0" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <text style="" >
+<tspan x="0" y="83.0" style="font-size:18px;" >SP XM_031946623_1.1</tspan>  </text>
+
+
+
+<script type="text/ecmascript">
+<![CDATA[
+function draw_bbox(text_id)
+{
+    var text_elem = document.getElementById(text_id);
+    var offset_px = 2;
+    var offset_py = 0;
+    bbox = text_elem.getBBox();
+    var box = document.createElementNS(document.rootElement.namespaceURI,'rect');
+    box.setAttribute('x', bbox.x - offset_px);
+    box.setAttribute('y', bbox.y - offset_py);
+    box.setAttribute('width', bbox.width + offset_px * 2);
+    box.setAttribute('height', bbox.height + offset_py * 2);
+    box.setAttribute('style','fill: white;'+'stroke: black;'+'stroke-width: 1px;');
+    text_elem.insertBefore(box,text_elem.childNodes[0]);
+
+    var svg = text_elem.parentNode;
+    svg.appendChild(text_elem);
+}
+
+for (var i=1; i < 1; i++)
+{
+draw_bbox("Mouseover" + i);
+}
+]]> 
+</script>
+</svg>

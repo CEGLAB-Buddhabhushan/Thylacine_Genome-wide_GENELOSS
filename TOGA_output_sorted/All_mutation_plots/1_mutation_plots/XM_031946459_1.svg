@@ -1,0 +1,118 @@
+<svg version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+width="612" height="138.0" viewBox = "0 -38.0 612 138.0"
+onclick="mouseclick(evt)">
+
+<script type="text/ecmascript">
+
+<![CDATA[
+    function mouseover(evt, target) { 
+    var gv = document.getElementById("globalVariable");
+    var previoustarget = gv.firstChild.nodeValue;
+    if (previoustarget != "none") 
+    {
+        	document.getElementById(gv.firstChild.nodeValue).setAttributeNS(null, "visibility", "hidden");
+    }
+    document.getElementById(target).setAttributeNS(null, "visibility", "visible");
+    gv.firstChild.nodeValue = target;
+        }
+
+    function mouseclick(evt) { 
+    var gv = document.getElementById("globalVariable");
+    var previoustarget = gv.firstChild.nodeValue;
+    if (previoustarget != "none") {
+        	document.getElementById(gv.firstChild.nodeValue).setAttributeNS(null, "visibility", "hidden");
+        }
+    }
+]]>
+  </script>
+<style type="text/css" >
+
+<![CDATA[
+    rect.anc_exon {
+              stroke-width:3;
+                  }
+
+    rect.non_anc_exon {
+              stroke: black; stroke-width:3; stroke-dasharray: 5,5;
+                    }
+
+    text {
+              font-size: 18px;
+              font-family: Courier New;
+          }
+                    ]]>
+</style>
+
+<defs>
+    <text x="150" y="40" id="globalVariable">none</text>
+</defs>
+
+  <rect class="anc_exon" x="0" y="35.0" width="0" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <rect class="anc_exon" x="0" y="35.0" width="524.8000000000001" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <line x1="25.200000000000003" y1="35.0" x2="25.200000000000003" y2="65.0" style="stroke:#121212; stroke-width:0.8; stroke-opacity:1"/>
+  <line x1="114.0" y1="35.0" x2="114.0" y2="65.0" style="stroke:#121212; stroke-width:0.8; stroke-opacity:1"/>
+  <polygon points="173.60000000000002,35.0 176.10000000000002,25.0 171.10000000000002,25.0" style="fill:#121212; stroke-opacity:1; fill-opacity:1"/>
+  <line x1="188.4" y1="35.0" x2="188.4" y2="65.0" style="stroke:#121212; stroke-width:0.8; stroke-opacity:1"/>
+  <polygon points="221.60000000000002,35.0 224.10000000000002,25.0 219.10000000000002,25.0" style="fill:#121212; stroke-opacity:1; fill-opacity:1"/>
+  <line x1="246.4" y1="35.0" x2="246.4" y2="65.0" style="stroke:#121212;stroke-width:3;"/>
+  <line x1="258.0" y1="35.0" x2="258.0" y2="65.0" style="stroke:#121212; stroke-width:0.8; stroke-opacity:1"/>
+  <polygon points="404.0,35.0 406.5,25.0 401.5,25.0" style="fill:#121212; stroke-opacity:1; fill-opacity:1"/>
+  <polygon points="444.8,35.0 447.3,25.0 442.3,25.0" style="fill:#121212; stroke-opacity:1; fill-opacity:1"/>
+  <line x1="491.20000000000005" y1="35.0" x2="491.20000000000005" y2="65.0" style="stroke:#878787;stroke-width:3;"/>
+  <line x1="510.40000000000003" y1="35.0" x2="510.40000000000003" y2="65.0" style="stroke:#121212; stroke-width:1.6; stroke-opacity:1"/>
+  <text style="" text-anchor="middle">
+<tspan x="24.8" y="26.0" style="font-size:18px;fill:#121212;" >-1</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="113.60000000000001" y="26.0" style="font-size:18px;fill:#121212;" >-1</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="180.8" y="16.0" style="font-size:18px;fill:#121212;" >+1</tspan><tspan x="180.8" y="-2.0" style="font-size:18px;fill:#121212;" >-1</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="233.60000000000002" y="16.0" style="font-size:18px;fill:#121212;" >+1</tspan><tspan x="233.60000000000002" y="-2.0" style="font-size:18px;fill:#121212;" >TAG</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="257.6" y="26.0" style="font-size:18px;fill:#121212;" >-1</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="404.0" y="16.0" style="font-size:18px;fill:#121212;" >+1</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="444.8" y="16.0" style="font-size:18px;fill:#121212;" >+4</tspan>  </text>
+  <text style="" text-anchor="middle">
+<tspan x="500.0" y="26.0" style="font-size:18px;fill:#878787;" >TAG</tspan><tspan x="500.0" y="8.0" style="font-size:18px;fill:#121212;" >-2</tspan>  </text>
+  <line x1="524.8000000000001" y1="50.0" x2="543.8000000000001" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="543.8000000000001" y1="50.0" x2="543.8000000000001" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="543.8000000000001" y1="50.0" x2="543.8000000000001" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <line x1="543.8000000000001" y1="50.0" x2="564.0" y2="50.0" style="stroke:#999; stroke-width:3;" />
+  <rect class="anc_exon" x="564" y="35.0" width="12" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <rect class="anc_exon" x="576" y="35.0" width="0" height="30" style="fill:#87bcbc;fill-opacity:1.00" />
+  <text style="" >
+<tspan x="0" y="83.0" style="font-size:18px;" >SP XM_031946459_1.1</tspan>  </text>
+
+
+
+<script type="text/ecmascript">
+<![CDATA[
+function draw_bbox(text_id)
+{
+    var text_elem = document.getElementById(text_id);
+    var offset_px = 2;
+    var offset_py = 0;
+    bbox = text_elem.getBBox();
+    var box = document.createElementNS(document.rootElement.namespaceURI,'rect');
+    box.setAttribute('x', bbox.x - offset_px);
+    box.setAttribute('y', bbox.y - offset_py);
+    box.setAttribute('width', bbox.width + offset_px * 2);
+    box.setAttribute('height', bbox.height + offset_py * 2);
+    box.setAttribute('style','fill: white;'+'stroke: black;'+'stroke-width: 1px;');
+    text_elem.insertBefore(box,text_elem.childNodes[0]);
+
+    var svg = text_elem.parentNode;
+    svg.appendChild(text_elem);
+}
+
+for (var i=1; i < 1; i++)
+{
+draw_bbox("Mouseover" + i);
+}
+]]> 
+</script>
+</svg>
