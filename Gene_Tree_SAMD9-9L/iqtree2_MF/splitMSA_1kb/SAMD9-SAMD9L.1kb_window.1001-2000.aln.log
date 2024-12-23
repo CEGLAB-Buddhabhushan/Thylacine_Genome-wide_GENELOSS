@@ -1,0 +1,300 @@
+IQ-TREE multicore version 2.3.3 COVID-edition for Linux x86 64-bit built Apr 25 2024
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    morpheus-OptiPlex-5050 (AVX2, FMA3, 503 GB RAM)
+Command: /home/morpheus/anaconda3/bin/iqtree2 -T AUTO -s SAMD9-SAMD9L.1kb_window.1001-2000.aln -m MFP --alrt 1000 -B 1000 --boot-trees
+Seed:    411213 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Dec 20 14:32:27 2024
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file SAMD9-SAMD9L.1kb_window.1001-2000.aln ... Fasta format detected
+Reading fasta file: done in 0.00234509 secs using 99.87% CPU
+Alignment most likely contains DNA/RNA sequences
+Alignment has 42 sequences with 1000 columns, 578 distinct patterns
+511 parsimony-informative, 101 singleton sites, 388 constant sites
+                                   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 9.39369e-05 secs using 4244% CPU
+   1  SAMD9L_Antechinus_flavipes           1.90%    passed     72.35%
+   2  SAMD9L_Dasyurus_viverrinus           1.90%    passed     99.65%
+   3  SAMD9L_Dromiciops_gliroides          1.90%    passed     89.04%
+   4  SAMD9L_Gracilinanus_agilis           1.90%    passed     97.84%
+   5  SAMD9L_Lagorchestes_hirsutus         1.90%    passed     64.16%
+   6  SAMD9L_Macropus_fuliginosus          1.90%    passed     59.99%
+   7  SAMD9L_Macropus_giganteus            1.90%    passed     52.82%
+   8  SAMD9L_Macrotis_lagotis              1.60%    passed     83.00%
+   9  SAMD9L_Monodelphis_domestica         1.90%    passed     62.22%
+  10  SAMD9L_Myrmecobius_fasciatus         1.90%    passed     83.58%
+  11  SAMD9L_Notamacropus_eugenii          1.90%    passed     74.12%
+  12  SAMD9L_Phalanger_gymnotis            1.90%    passed     42.40%
+  13  SAMD9L_Potorous_gilbertii            1.90%    passed     61.26%
+  14  SAMD9L_Pseudocheirus_occidentalis    1.90%    passed     68.16%
+  15  SAMD9L_Pseudochirops_corinnae        1.90%    passed     66.25%
+  16  SAMD9L_Pseudochirops_cupreus         1.90%    passed     70.53%
+  17  SAMD9L_Sarcophilus_harrisii          1.90%    passed     94.42%
+  18  SAMD9L_Sminthopsis_crassicaudata     1.90%    passed     84.92%
+  19  SAMD9L_Thylacinus_cynocephalus       2.80%    passed     99.25%
+  20  SAMD9L_Trichosurus_vulpecula         1.90%    passed     57.85%
+  21  SAMD9L_Vombatus_ursinus              1.90%    passed     60.29%
+  22  SAMD9_Antechinus_flavipes            1.90%    passed     80.52%
+  23  SAMD9_Dasyurus_viverrinus            1.90%    passed     74.35%
+  24  SAMD9_Dromiciops_gliroides           1.90%    passed     85.67%
+  25  SAMD9_Gracilinanus_agilis            1.90%    passed     36.30%
+  26  SAMD9_Lagorchestes_hirsutus          1.90%    passed     70.98%
+  27  SAMD9_Macropus_fuliginosus           1.90%    passed     88.28%
+  28  SAMD9_Macropus_giganteus             1.90%    passed     89.92%
+  29  SAMD9_Macrotis_lagotis               1.90%    passed     77.82%
+  30  SAMD9_Monodelphis_domestica          1.90%    passed     62.24%
+  31  SAMD9_Myrmecobius_fasciatus          1.90%    passed     36.35%
+  32  SAMD9_Notamacropus_eugenii           1.90%    passed     94.31%
+  33  SAMD9_Phalanger_gymnotis             1.90%    passed     96.14%
+  34  SAMD9_Potorous_gilbertii             1.90%    passed     78.61%
+  35  SAMD9_Pseudocheirus_occidentalis     1.90%    passed     88.90%
+  36  SAMD9_Pseudochirops_corinnae         1.90%    passed     89.56%
+  37  SAMD9_Pseudochirops_cupreus          1.90%    passed     85.50%
+  38  SAMD9_Sarcophilus_harrisii           1.90%    passed     79.21%
+  39  SAMD9_Sminthopsis_crassicaudata      1.90%    passed     90.11%
+  40  SAMD9_Thylacinus_cynocephalus        1.90%    passed     66.55%
+  41  SAMD9_Trichosurus_vulpecula          1.90%    passed     74.34%
+  42  SAMD9_Vombatus_ursinus               1.90%    passed     86.67%
+****  TOTAL                                1.91%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.008 seconds
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+1578 trees examined
+Threads: 1 / Time: 72.034 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -17937
+Threads: 2 / Time: 43.996 sec / Speedup: 1.637 / Efficiency: 82% / LogL: -17937
+Threads: 3 / Time: 49.352 sec / Speedup: 1.460 / Efficiency: 49% / LogL: -17937
+BEST NUMBER OF THREADS: 2
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -9436.712
+Optimal log-likelihood: -9436.601
+Rate parameters:  A-C: 1.28870  A-G: 4.38349  A-T: 0.71643  C-G: 1.16844  C-T: 4.39599  G-T: 1.00000
+Base frequencies:  A: 0.347  C: 0.183  G: 0.193  T: 0.277
+Proportion of invariable sites: 0.190
+Gamma shape alpha: 1.624
+Parameters optimization took 1 rounds (0.018 sec)
+Time for fast ML tree search: 0.135 seconds
+
+NOTE: ModelFinder requires 10 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 1000) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         9685.509     89  19549.019    19566.623    19985.809
+  2  GTR+F+I       9476.771     90  19133.542    19151.562    19575.240
+  3  GTR+F+G4      9443.429     90  19066.859    19084.878    19508.557
+  4  GTR+F+I+G4    9436.457     91  19054.914    19073.355    19501.520
+  5  GTR+F+R2      9449.744     91  19081.489    19099.929    19528.094
+  6  GTR+F+R3      9434.530     93  19055.061    19074.359    19511.482
+  7  GTR+F+R4      9433.856     95  19057.711    19077.888    19523.948
+ 14  GTR+F+I+R2    9436.273     92  19056.547    19075.413    19508.060
+ 15  GTR+F+I+R3    9433.492     94  19054.984    19074.719    19516.313
+ 25  SYM+G4        9519.218     87  19212.436    19229.226    19639.411
+ 26  SYM+I+G4      9511.555     88  19199.110    19216.304    19630.992
+ 28  SYM+R3        9507.952     90  19195.903    19213.923    19637.601
+ 36  SYM+I+R2      9507.359     89  19192.719    19210.323    19629.509
+ 47  TVM+F+G4      9443.433     89  19064.865    19082.470    19501.656
+ 48  TVM+F+I+G4    9436.387     90  19052.775    19070.794    19494.473
+ 50  TVM+F+R3      9434.541     92  19053.082    19071.948    19504.595
+ 58  TVM+F+I+R2    9436.274     91  19054.548    19072.988    19501.153
+ 69  TVMe+G4       9520.398     86  19212.795    19229.185    19634.862
+ 70  TVMe+I+G4     9512.627     87  19199.254    19216.043    19626.229
+ 72  TVMe+R3       9509.022     89  19196.045    19213.649    19632.835
+ 80  TVMe+I+R2     9508.777     88  19193.554    19210.748    19625.436
+ 91  TIM3+F+G4     9445.991     88  19067.982    19085.176    19499.865
+ 92  TIM3+F+I+G4   9438.875     89  19055.749    19073.354    19492.540
+ 94  TIM3+F+R3     9436.853     91  19055.705    19074.146    19502.311
+102  TIM3+F+I+R2   9438.778     90  19057.557    19075.577    19499.255
+113  TIM3e+G4      9525.564     85  19221.128    19237.124    19638.287
+114  TIM3e+I+G4    9517.744     86  19207.489    19223.879    19629.556
+116  TIM3e+R3      9514.376     88  19204.752    19221.946    19636.634
+124  TIM3e+I+R2    9513.987     87  19201.974    19218.764    19628.949
+135  TIM2+F+G4     9454.405     88  19084.810    19102.004    19516.692
+136  TIM2+F+I+G4   9447.152     89  19072.305    19089.909    19509.095
+138  TIM2+F+R3     9445.512     91  19073.024    19091.464    19519.629
+146  TIM2+F+I+R2   9446.487     90  19072.973    19090.993    19514.671
+157  TIM2e+G4      9521.087     85  19212.174    19228.170    19629.334
+158  TIM2e+I+G4    9513.393     86  19198.786    19215.176    19620.853
+160  TIM2e+R3      9509.774     88  19195.549    19212.743    19627.431
+168  TIM2e+I+R2    9509.285     87  19192.569    19209.359    19619.544
+179  TIM+F+G4      9449.967     88  19075.934    19093.128    19507.817
+180  TIM+F+I+G4    9442.627     89  19063.253    19080.858    19500.043
+182  TIM+F+R3      9441.056     91  19064.112    19082.552    19510.717
+190  TIM+F+I+R2    9441.900     90  19063.800    19081.820    19505.498
+201  TIMe+G4       9524.451     85  19218.903    19234.898    19636.062
+202  TIMe+I+G4     9516.611     86  19205.223    19221.613    19627.290
+204  TIMe+R3       9513.269     88  19202.538    19219.733    19634.421
+212  TIMe+I+R2     9512.613     87  19199.226    19216.016    19626.201
+223  TPM3u+F+G4    9445.991     87  19065.982    19082.772    19492.957
+224  TPM3u+F+I+G4  9438.831     88  19053.662    19070.857    19485.545
+226  TPM3u+F+R3    9436.868     90  19053.736    19071.756    19495.434
+234  TPM3u+F+I+R2  9438.779     89  19055.559    19073.163    19492.349
+245  TPM3+G4       9526.620     84  19221.239    19236.846    19633.491
+246  TPM3+I+G4     9518.714     85  19207.428    19223.423    19624.587
+248  TPM3+R3       9515.332     87  19204.665    19221.454    19631.639
+256  TPM3+I+R2     9515.289     86  19202.578    19218.968    19624.645
+267  TPM2u+F+G4    9454.409     87  19082.819    19099.608    19509.793
+268  TPM2u+F+I+G4  9447.119     88  19070.238    19087.433    19502.121
+270  TPM2u+F+R3    9445.517     90  19071.034    19089.053    19512.732
+278  TPM2u+F+I+R2  9446.493     89  19070.986    19088.591    19507.777
+289  TPM2+G4       9522.237     84  19212.475    19228.081    19624.726
+290  TPM2+I+G4     9514.451     85  19198.903    19214.898    19616.062
+292  TPM2+R3       9510.909     87  19195.817    19212.607    19622.792
+300  TPM2+I+R2     9510.682     86  19193.365    19209.755    19615.432
+311  K3Pu+F+G4     9449.968     87  19073.936    19090.725    19500.911
+312  K3Pu+F+I+G4   9442.592     88  19061.184    19078.378    19493.067
+314  K3Pu+F+R3     9441.060     90  19062.120    19080.139    19503.818
+322  K3Pu+F+I+R2   9441.905     89  19061.811    19079.415    19498.601
+333  K3P+G4        9525.469     84  19218.938    19234.544    19631.189
+334  K3P+I+G4      9517.543     85  19205.086    19221.081    19622.245
+336  K3P+R3        9514.298     87  19202.595    19219.385    19629.570
+344  K3P+I+R2      9513.891     86  19199.782    19216.172    19621.849
+355  TN+F+G4       9455.028     87  19084.056    19100.846    19511.031
+356  TN+F+I+G4     9447.713     88  19071.427    19088.621    19503.309
+358  TN+F+R3       9445.988     90  19071.976    19089.996    19513.674
+366  TN+F+I+R2     9446.878     89  19071.756    19089.360    19508.546
+377  TNe+G4        9525.978     84  19219.957    19235.563    19632.208
+378  TNe+I+G4      9518.161     85  19206.322    19222.318    19623.481
+380  TNe+R3        9514.852     87  19203.704    19220.493    19630.679
+388  TNe+I+R2      9514.263     86  19200.527    19216.917    19622.594
+399  HKY+F+G4      9455.030     86  19082.060    19098.450    19504.127
+400  HKY+F+I+G4    9447.714     87  19069.427    19086.217    19496.402
+402  HKY+F+R3      9445.994     89  19069.989    19087.593    19506.779
+410  HKY+F+I+R2    9446.884     88  19069.768    19086.962    19501.650
+421  K2P+G4        9526.997     83  19219.993    19235.216    19627.337
+422  K2P+I+G4      9519.140     84  19206.279    19221.886    19618.531
+424  K2P+R3        9515.775     86  19203.551    19219.940    19625.617
+432  K2P+I+R2      9515.539     85  19201.078    19217.073    19618.237
+443  F81+F+G4      9829.371     85  19828.742    19844.737    20245.901
+444  F81+F+I+G4    9821.730     86  19815.459    19831.849    20237.526
+446  F81+F+R3      9820.506     88  19817.011    19834.206    20248.894
+454  F81+F+I+R2    9821.957     87  19817.914    19834.703    20244.888
+465  JC+G4         9874.897     82  19913.794    19928.638    20316.229
+466  JC+I+G4       9867.091     83  19900.182    19915.405    20307.526
+468  JC+R3         9864.942     85  19899.884    19915.880    20317.044
+476  JC+I+R2       9865.461     84  19898.923    19914.529    20311.174
+Akaike Information Criterion:           TVM+F+I+G4
+Corrected Akaike Information Criterion: TVM+F+I+G4
+Bayesian Information Criterion:         TPM3u+F+I+G4
+Best-fit model: TPM3u+F+I+G4 chosen according to BIC
+
+All model information printed to SAMD9-SAMD9L.1kb_window.1001-2000.aln.model.gz
+CPU time for ModelFinder: 393.853 seconds (0h:6m:33s)
+Wall-clock time for ModelFinder: 202.737 seconds (0h:3m:22s)
+Generating 1000 samples for ultrafast bootstrap (seed: 411213)...
+
+NOTE: 5 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 1.776 / Estimate: 0.000, 0.816 / LogL: -9445.989
+Init pinv, alpha: 0.043, 1.776 / Estimate: 0.048, 0.939 / LogL: -9444.303
+Init pinv, alpha: 0.086, 1.776 / Estimate: 0.189, 1.623 / LogL: -9439.194
+Init pinv, alpha: 0.129, 1.776 / Estimate: 0.188, 1.612 / LogL: -9439.230
+Init pinv, alpha: 0.172, 1.776 / Estimate: 0.185, 1.592 / LogL: -9439.298
+Init pinv, alpha: 0.216, 1.776 / Estimate: 0.218, 1.887 / LogL: -9438.697
+Init pinv, alpha: 0.259, 1.776 / Estimate: 0.243, 2.185 / LogL: -9438.780
+Init pinv, alpha: 0.302, 1.776 / Estimate: 0.245, 2.207 / LogL: -9438.810
+Init pinv, alpha: 0.345, 1.776 / Estimate: 0.245, 2.213 / LogL: -9438.819
+Init pinv, alpha: 0.388, 1.776 / Estimate: 0.244, 2.195 / LogL: -9438.795
+Optimal pinv,alpha: 0.218, 1.887 / LogL: -9438.697
+
+Parameters optimization took 1.007 sec
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00578809 secs using 200% CPU
+Computing ML distances took 0.005904 sec (of wall-clock time) 0.011856 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000267982 secs using 201.5% CPU
+Computing RapidNJ tree took 0.001134 sec (of wall-clock time) 0.003109 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -9468.598
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.489 second
+Computing log-likelihood of 98 initial trees ... 0.430 seconds
+Current best score: -9438.697
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -9438.402
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -9437.478
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 8: -9435.246
+UPDATE BEST LOG-LIKELIHOOD: -9435.246
+Iteration 10 / LogL: -9435.889 / Time: 0h:3m:25s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 14: -9435.226
+Iteration 20 / LogL: -9437.507 / Time: 0h:3m:26s
+Finish initializing candidate tree set (8)
+Current best tree score: -9435.226 / CPU time: 2.434
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -9437.537 / Time: 0h:3m:26s (0h:0m:12s left)
+Iteration 40 / LogL: -9435.227 / Time: 0h:3m:27s (0h:0m:9s left)
+Iteration 50 / LogL: -9436.822 / Time: 0h:3m:28s (0h:0m:7s left)
+Log-likelihood cutoff on original alignment: -9463.606
+UFBoot trees printed to SAMD9-SAMD9L.1kb_window.1001-2000.aln.ufboot
+Iteration 60 / LogL: -9435.262 / Time: 0h:3m:29s (0h:0m:6s left)
+Iteration 70 / LogL: -9435.320 / Time: 0h:3m:30s (0h:0m:5s left)
+Iteration 80 / LogL: -9435.237 / Time: 0h:3m:31s (0h:0m:3s left)
+Iteration 90 / LogL: -9435.371 / Time: 0h:3m:32s (0h:0m:2s left)
+Iteration 100 / LogL: -9436.813 / Time: 0h:3m:33s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -9464.314
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+UFBoot trees printed to SAMD9-SAMD9L.1kb_window.1001-2000.aln.ufboot
+Iteration 110 / LogL: -9437.504 / Time: 0h:3m:34s (0h:0m:9s left)
+TREE SEARCH COMPLETED AFTER 115 ITERATIONS / Time: 0h:3m:34s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -9435.226
+Optimal log-likelihood: -9435.226
+Rate parameters:  A-C: 1.50953  A-G: 5.38161  A-T: 1.00000  C-G: 1.50953  C-T: 5.38161  G-T: 1.00000
+Base frequencies:  A: 0.347  C: 0.183  G: 0.193  T: 0.277
+Proportion of invariable sites: 0.221
+Gamma shape alpha: 1.898
+Parameters optimization took 1 rounds (0.012 sec)
+BEST SCORE FOUND : -9435.226
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.359 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file SAMD9-SAMD9L.1kb_window.1001-2000.aln.splits.nex
+Total tree length: 1.977
+
+Total number of iterations: 115
+CPU time used for tree search: 21.593 sec (0h:0m:21s)
+Wall-clock time used for tree search: 10.946 sec (0h:0m:10s)
+Total CPU time used: 418.530 sec (0h:6m:58s)
+Total wall-clock time used: 215.221 sec (0h:3m:35s)
+UFBoot trees printed to SAMD9-SAMD9L.1kb_window.1001-2000.aln.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file SAMD9-SAMD9L.1kb_window.1001-2000.aln.splits.nex...
+42 taxa and 201 splits.
+Consensus tree written to SAMD9-SAMD9L.1kb_window.1001-2000.aln.contree
+Reading input trees file SAMD9-SAMD9L.1kb_window.1001-2000.aln.contree
+Log-likelihood of consensus tree: -9435.228
+
+Analysis results written to: 
+  IQ-TREE report:                SAMD9-SAMD9L.1kb_window.1001-2000.aln.iqtree
+  Maximum-likelihood tree:       SAMD9-SAMD9L.1kb_window.1001-2000.aln.treefile
+  Likelihood distances:          SAMD9-SAMD9L.1kb_window.1001-2000.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          SAMD9-SAMD9L.1kb_window.1001-2000.aln.splits.nex
+  Consensus tree:                SAMD9-SAMD9L.1kb_window.1001-2000.aln.contree
+  UFBoot trees:                  SAMD9-SAMD9L.1kb_window.1001-2000.aln.ufboot
+  Screen log file:               SAMD9-SAMD9L.1kb_window.1001-2000.aln.log
+
+Date and Time: Fri Dec 20 14:36:02 2024

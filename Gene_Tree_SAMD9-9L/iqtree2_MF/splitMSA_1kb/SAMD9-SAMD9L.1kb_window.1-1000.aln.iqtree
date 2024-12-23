@@ -1,0 +1,373 @@
+IQ-TREE 2.3.3 COVID-edition built Apr 25 2024
+
+Input file name: SAMD9-SAMD9L.1kb_window.1-1000.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 483442
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 42 sequences with 1000 nucleotide sites
+Number of constant sites: 326 (= 32.6% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 326 (= 32.6% of all sites)
+Number of parsimony informative sites: 534
+Number of distinct site patterns: 677
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM3+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TIM3+F+I+G4      -10151.044   20480.088 +    0.355   20497.692 +    0.456   20916.878 +    0.799
+TPM3u+F+I+G4     -10156.086   20488.172 -  0.00623   20505.366 -  0.00983   20920.054 +    0.163
+TIM3+F+I+R2      -10151.038   20482.076 +    0.131   20500.096 +    0.137   20923.774 -   0.0254
+TPM3u+F+I+R2     -10156.047   20490.095 -  0.00238   20507.699 -  0.00306   20926.885 -  0.00537
+GTR+F+I+G4       -10149.150   20480.299 +    0.319   20498.740 +     0.27   20926.905 -  0.00531
+TVM+F+I+G4       -10153.968   20487.936 -  0.00701   20505.956 -  0.00732   20929.634 -  0.00136
+GTR+F+I+R2       -10148.920   20481.841 +    0.148   20500.707 +    0.101   20933.354 - 0.000211
+TVM+F+I+R2       -10153.884   20489.768 -   0.0028   20508.209 -  0.00237   20936.374 - 4.67e-05
+TN+F+I+G4        -10166.758   20509.515 - 1.44e-07   20526.710 - 2.28e-07   20941.398 - 3.79e-06
+GTR+F+G4         -10159.951   20499.901 - 1.77e-05   20517.921 - 1.85e-05   20941.599 - 3.42e-06
+TIM+F+I+G4       -10164.353   20506.706 - 5.88e-07   20524.311 - 7.57e-07   20943.497 - 1.33e-06
+GTR+F+R2         -10157.487   20496.974 - 7.64e-05   20515.415 - 6.47e-05   20943.580 - 1.27e-06
+HKY+F+I+G4       -10171.651   20517.301 - 2.94e-09   20534.091 - 5.69e-09   20944.276 - 8.98e-07
+TIM2+F+I+G4      -10164.912   20507.824 - 3.36e-07   20525.429 - 4.33e-07   20944.614 - 7.58e-07
+K3Pu+F+I+G4      -10169.223   20514.445 - 1.23e-08   20531.640 - 1.94e-08   20946.328 - 3.22e-07
+GTR+F+I+R3       -10148.631   20485.262 -   0.0267   20504.997 -   0.0118   20946.591 - 2.82e-07
+GTR+F+R3         -10152.145   20490.289 -  0.00216   20509.587 -  0.00119   20946.710 - 2.66e-07
+TPM2u+F+I+G4     -10169.679   20515.358 - 7.78e-09   20532.552 - 1.23e-08   20947.240 - 2.04e-07
+TN+F+I+R2        -10166.699   20511.399 - 5.63e-08   20529.003 - 7.24e-08   20948.189 - 1.27e-07
+TIM+F+I+R2       -10164.337   20508.675 -  2.2e-07   20526.695 -  2.3e-07   20950.373 - 4.26e-08
+HKY+F+I+R2       -10171.637   20519.274 -  1.1e-09   20536.468 - 1.73e-09   20951.157 - 2.88e-08
+TIM2+F+I+R2      -10164.736   20509.473 - 1.48e-07   20527.493 - 1.54e-07   20951.171 - 2.86e-08
+K3Pu+F+I+R2      -10169.251   20516.502 - 4.39e-09   20534.107 - 5.65e-09   20953.292 - 9.89e-09
+TPM2u+F+I+R2     -10169.560   20517.120 - 3.22e-09   20534.724 - 4.15e-09   20953.910 - 7.27e-09
+GTR+F+I          -10175.660   20531.319 - 2.66e-12   20549.339 - 2.78e-12   20973.017 - 5.15e-13
+TPM3+I+G4        -10253.845   20677.690 - 4.38e-44   20693.685 - 1.26e-43   21094.849 - 1.81e-39
+K2P+I+G4         -10258.214   20684.429 - 1.51e-45   20700.035 - 5.26e-45   21096.680 - 7.23e-40
+TPM2+I+G4        -10255.366   20680.732 - 9.56e-45   20696.728 - 2.75e-44   21097.892 - 3.94e-40
+TIM3e+I+G4       -10253.732   20679.463 -  1.8e-44   20695.853 - 4.26e-44   21101.530 -  6.4e-41
+TPM3+I+R2        -10253.851   20679.702 -  1.6e-44   20696.092 - 3.78e-44   21101.769 - 5.68e-41
+K3P+I+G4         -10257.714   20685.428 - 9.14e-46   20701.423 - 2.63e-45   21102.587 - 3.77e-41
+TVMe+I+G4        -10250.952   20675.905 - 1.07e-43   20692.694 - 2.06e-43   21102.880 - 3.26e-41
+TNe+I+G4         -10258.119   20686.239 - 6.09e-46   20702.235 - 1.75e-45   21103.398 - 2.51e-41
+K2P+I+R2         -10258.208   20686.416 - 5.57e-46   20702.412 -  1.6e-45   21103.575 -  2.3e-41
+TIM2e+I+G4       -10255.231   20682.461 - 4.03e-45   20698.851 - 9.51e-45   21104.528 - 1.43e-41
+TPM2+I+R2        -10255.314   20682.628 -  3.7e-45   20699.018 - 8.74e-45   21104.695 - 1.31e-41
+TIM3e+I+R2       -10253.692   20681.383 -  6.9e-45   20698.173 - 1.33e-44   21108.358 - 2.11e-42
+TIMe+I+G4        -10257.619   20687.238 -  3.7e-46   20703.628 - 8.72e-46   21109.305 - 1.31e-42
+SYM+I+G4         -10250.809   20677.618 - 4.54e-44   20694.813 - 7.16e-44   21109.501 - 1.19e-42
+K3P+I+R2         -10257.724   20687.447 - 3.33e-46   20703.837 - 7.86e-46   21109.514 - 1.18e-42
+TVMe+I+R2        -10250.947   20677.894 - 3.95e-44   20695.088 - 6.24e-44   21109.776 - 1.04e-42
+TNe+I+R2         -10258.161   20688.323 - 2.15e-46   20704.713 - 5.07e-46   21110.390 - 7.62e-43
+TIM2e+I+R2       -10255.220   20684.439 -  1.5e-45   20701.229 -  2.9e-45   21111.414 - 4.57e-43
+SYM+I+R2         -10250.741   20679.483 - 1.79e-44   20697.087 -  2.3e-44   21116.273 - 4.02e-44
+TIMe+I+R2        -10257.673   20689.346 - 1.29e-46   20706.135 - 2.49e-46   21116.320 - 3.93e-44
+GTR+F            -10352.516   20883.033 - 1.13e-88   20900.637 - 1.45e-88   21319.823 - 2.54e-88
+F81+F+I+G4       -10593.682   21359.364 - 4.14e-192   21375.754 - 9.78e-192   21781.431 - 1.47e-188
+F81+F+I+R2       -10593.860   21361.721 - 1.28e-192   21378.510 - 2.47e-192   21788.695 - 3.89e-190
+JC+I+G4          -10662.293   21490.585 - 1.33e-220   21505.808 - 5.62e-220   21897.929 - 7.42e-214
+JC+I+R2          -10662.309   21492.617 - 4.81e-221   21508.224 - 1.68e-220   21904.869 - 2.31e-215
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TIM3+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.7144
+  A-G: 5.2829
+  A-T: 1.0000
+  C-G: 1.7144
+  C-T: 6.6719
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3731
+  pi(C) = 0.1789
+  pi(G) = 0.2018
+  pi(T) = 0.2462
+
+Rate matrix Q:
+
+  A   -0.8018    0.1519    0.5279    0.1219
+  C    0.3169    -1.302    0.1713    0.8136
+  G    0.9764    0.1519     -1.25    0.1219
+  T    0.1848    0.5912   0.09993    -0.876
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.1983
+Gamma shape alpha: 3.058
+
+ Category  Relative_rate  Proportion
+  0         0              0.1983
+  1         0.4911         0.2004
+  2         0.9164         0.2004
+  3         1.351          0.2004
+  4         2.231          0.2004
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -10150.9849 (s.e. 239.1042)
+Unconstrained log-likelihood (without tree): -5658.4899
+Number of free parameters (#branches + #model parameters): 89
+Akaike information criterion (AIC) score: 20479.9698
+Corrected Akaike information criterion (AICc) score: 20497.5742
+Bayesian information criterion (BIC) score: 20916.7600
+
+Total tree length (sum of branch lengths): 2.3143
+Sum of internal branch lengths: 1.1705 (50.5754% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'SAMD9L_Antechinus_flavipes' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++--SAMD9L_Antechinus_flavipes
+|
+|  +--SAMD9L_Dasyurus_viverrinus
++--| (98.8/100)
+|  +--SAMD9L_Sarcophilus_harrisii
+|
+|               +----SAMD9L_Dromiciops_gliroides
+|            +--| (82.6/53)
+|            |  |                 +--SAMD9L_Lagorchestes_hirsutus
+|            |  |              +--| (44.6/82)
+|            |  |              |  |     +--SAMD9L_Macropus_fuliginosus
+|            |  |              |  |  +--| (85.5/88)
+|            |  |              |  |  |  +--SAMD9L_Macropus_giganteus
+|            |  |              |  +--| (84.1/96)
+|            |  |              |     +--SAMD9L_Notamacropus_eugenii
+|            |  |           +--| (100/100)
+|            |  |           |  +--SAMD9L_Potorous_gilbertii
+|            |  |        +--| (84.3/94)
+|            |  |        |  |  +--SAMD9L_Phalanger_gymnotis
+|            |  |        |  +--| (99.8/100)
+|            |  |        |     +--SAMD9L_Trichosurus_vulpecula
+|            |  |     +--| (84.3/95)
+|            |  |     |  |  +--SAMD9L_Pseudocheirus_occidentalis
+|            |  |     |  +--| (100/100)
+|            |  |     |     |  +--SAMD9L_Pseudochirops_corinnae
+|            |  |     |     +--| (94.9/99)
+|            |  |     |        +--SAMD9L_Pseudochirops_cupreus
+|            |  |  +--| (100/100)
+|            |  |  |  +----SAMD9L_Vombatus_ursinus
+|            |  +--| (69.9/49)
+|            |     +------SAMD9L_Macrotis_lagotis
+|         +--| (71.4/64)
+|         |  |     +--SAMD9L_Gracilinanus_agilis
+|         |  +-----| (100/100)
+|         |        +--SAMD9L_Monodelphis_domestica
+|     +---| (99.9/100)
+|     |   |                                                       +--SAMD9_Antechinus_flavipes
+|     |   |                                                    +--| (97.3/100)
+|     |   |                                                    |  |  +--SAMD9_Dasyurus_viverrinus
+|     |   |                                                    |  +--| (99.2/100)
+|     |   |                                                    |     +--SAMD9_Sarcophilus_harrisii
+|     |   |                                                 +--| (97.8/100)
+|     |   |                                                 |  +--SAMD9_Sminthopsis_crassicaudata
+|     |   |                                              +--| (100/100)
+|     |   |                                              |  |  +--SAMD9_Myrmecobius_fasciatus
+|     |   |                                              |  +--| (57/83)
+|     |   |                                              |     +--SAMD9_Thylacinus_cynocephalus
+|     |   |                                           +--| (50.3/59)
+|     |   |                                           |  |            +--SAMD9_Lagorchestes_hirsutus
+|     |   |                                           |  |         +--| (93.5/99)
+|     |   |                                           |  |         |  |     +**SAMD9_Macropus_fuliginosus
+|     |   |                                           |  |         |  |  +--| (91.9/99)
+|     |   |                                           |  |         |  |  |  +--SAMD9_Macropus_giganteus
+|     |   |                                           |  |         |  +--| (98.6/100)
+|     |   |                                           |  |         |     +--SAMD9_Notamacropus_eugenii
+|     |   |                                           |  |     +---| (100/100)
+|     |   |                                           |  |     |   +--SAMD9_Potorous_gilbertii
+|     |   |                                           |  |  +--| (95.7/98)
+|     |   |                                           |  |  |  |     +--SAMD9_Phalanger_gymnotis
+|     |   |                                           |  |  |  |  +--| (99.9/100)
+|     |   |                                           |  |  |  |  |  +--SAMD9_Trichosurus_vulpecula
+|     |   |                                           |  |  |  +--| (53.9/74)
+|     |   |                                           |  |  |     |  +--SAMD9_Pseudocheirus_occidentalis
+|     |   |                                           |  |  |     +--| (99.9/100)
+|     |   |                                           |  |  |        |  +--SAMD9_Pseudochirops_corinnae
+|     |   |                                           |  |  |        +--| (99.7/100)
+|     |   |                                           |  |  |           +--SAMD9_Pseudochirops_cupreus
+|     |   |                                           |  +--| (93/89)
+|     |   |                                           |     +--SAMD9_Vombatus_ursinus
+|     |   |                                        +--| (60.5/73)
+|     |   |                                        |  +-----SAMD9_Dromiciops_gliroides
+|     |   |                                   +----| (96.5/96)
+|     |   |                                   |    +---------SAMD9_Macrotis_lagotis
+|     |   +-----------------------------------| (100/100)
+|     |                                       |      +----SAMD9_Gracilinanus_agilis
+|     |                                       +------| (99.8/100)
+|     |                                              +--SAMD9_Monodelphis_domestica
+|  +--| (99.4/100)
+|  |  |  +--SAMD9L_Myrmecobius_fasciatus
+|  |  +--| (82.9/93)
+|  |     +---SAMD9L_Thylacinus_cynocephalus
++--| (93/95)
+   +--SAMD9L_Sminthopsis_crassicaudata
+
+Tree in newick format:
+
+(SAMD9L_Antechinus_flavipes:0.0260136232,(SAMD9L_Dasyurus_viverrinus:0.0048503048,SAMD9L_Sarcophilus_harrisii:0.0049748924)98.8/100:0.0151929395,(((((SAMD9L_Dromiciops_gliroides:0.0616529607,((((((SAMD9L_Lagorchestes_hirsutus:0.0147978826,((SAMD9L_Macropus_fuliginosus:0.0061631913,SAMD9L_Macropus_giganteus:0.0039606710)85.5/88:0.0045542199,SAMD9L_Notamacropus_eugenii:0.0107836742)84.1/96:0.0040501792)44.6/82:0.0044915998,SAMD9L_Potorous_gilbertii:0.0212568475)100/100:0.0416807575,(SAMD9L_Phalanger_gymnotis:0.0314153066,SAMD9L_Trichosurus_vulpecula:0.0147144160)99.8/100:0.0259408149)84.3/94:0.0053119382,(SAMD9L_Pseudocheirus_occidentalis:0.0302007458,(SAMD9L_Pseudochirops_corinnae:0.0061596404,SAMD9L_Pseudochirops_cupreus:0.0169012924)94.9/99:0.0095832088)100/100:0.0372481111)84.3/95:0.0074860849,SAMD9L_Vombatus_ursinus:0.0582936723)100/100:0.0393573731,SAMD9L_Macrotis_lagotis:0.0779117191)69.9/49:0.0036068436)82.6/53:0.0057867426,(SAMD9L_Gracilinanus_agilis:0.0294452545,SAMD9L_Monodelphis_domestica:0.0422540635)100/100:0.0705052466)71.4/64:0.0095627475,(((((((SAMD9_Antechinus_flavipes:0.0107511000,(SAMD9_Dasyurus_viverrinus:0.0101693309,SAMD9_Sarcophilus_harrisii:0.0067729183)99.2/100:0.0138015799)97.3/100:0.0111791450,SAMD9_Sminthopsis_crassicaudata:0.0255314337)97.8/100:0.0145674336,(SAMD9_Myrmecobius_fasciatus:0.0301784735,SAMD9_Thylacinus_cynocephalus:0.0334654545)57/83:0.0050668778)100/100:0.0340227873,((((SAMD9_Lagorchestes_hirsutus:0.0115464670,((SAMD9_Macropus_fuliginosus:0.0000010243,SAMD9_Macropus_giganteus:0.0010823583)91.9/99:0.0038293272,SAMD9_Notamacropus_eugenii:0.0127011245)98.6/100:0.0112220400)93.5/99:0.0089583174,SAMD9_Potorous_gilbertii:0.0327075012)100/100:0.0441201118,((SAMD9_Phalanger_gymnotis:0.0213908856,SAMD9_Trichosurus_vulpecula:0.0210586304)99.9/100:0.0270741482,(SAMD9_Pseudocheirus_occidentalis:0.0318391863,(SAMD9_Pseudochirops_corinnae:0.0109146027,SAMD9_Pseudochirops_cupreus:0.0044687900)99.7/100:0.0198063338)99.9/100:0.0265298027)53.9/74:0.0057861329)95.7/98:0.0105840430,SAMD9_Vombatus_ursinus:0.0428454151)93/89:0.0103188603)50.3/59:0.0066760132,SAMD9_Dromiciops_gliroides:0.0658014008)60.5/73:0.0125195899,SAMD9_Macrotis_lagotis:0.1117709436)96.5/96:0.0581524134,(SAMD9_Gracilinanus_agilis:0.0561491980,SAMD9_Monodelphis_domestica:0.0376909173)99.8/100:0.0828751746)100/100:0.3953857115)99.9/100:0.0474128565,(SAMD9L_Myrmecobius_fasciatus:0.0310261188,SAMD9L_Thylacinus_cynocephalus:0.0518541764)82.9/93:0.0065232503)99.4/100:0.0205174405,SAMD9L_Sminthopsis_crassicaudata:0.0203651794)93/95:0.0091783309);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -10150.986591
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--SAMD9L_Antechinus_flavipes
+|
+|  +--SAMD9L_Dasyurus_viverrinus
++--| (100)
+|  +--SAMD9L_Sarcophilus_harrisii
+|
+|               +----SAMD9L_Dromiciops_gliroides
+|            +--| (53)
+|            |  |                 +--SAMD9L_Lagorchestes_hirsutus
+|            |  |              +--| (82)
+|            |  |              |  |     +--SAMD9L_Macropus_fuliginosus
+|            |  |              |  |  +--| (88)
+|            |  |              |  |  |  +--SAMD9L_Macropus_giganteus
+|            |  |              |  +--| (96)
+|            |  |              |     +--SAMD9L_Notamacropus_eugenii
+|            |  |           +--| (100)
+|            |  |           |  +--SAMD9L_Potorous_gilbertii
+|            |  |        +--| (94)
+|            |  |        |  |  +--SAMD9L_Phalanger_gymnotis
+|            |  |        |  +--| (100)
+|            |  |        |     +--SAMD9L_Trichosurus_vulpecula
+|            |  |     +--| (95)
+|            |  |     |  |  +--SAMD9L_Pseudocheirus_occidentalis
+|            |  |     |  +--| (100)
+|            |  |     |     |  +--SAMD9L_Pseudochirops_corinnae
+|            |  |     |     +--| (99)
+|            |  |     |        +--SAMD9L_Pseudochirops_cupreus
+|            |  |  +--| (100)
+|            |  |  |  +----SAMD9L_Vombatus_ursinus
+|            |  +--| (49)
+|            |     +------SAMD9L_Macrotis_lagotis
+|         +--| (64)
+|         |  |     +--SAMD9L_Gracilinanus_agilis
+|         |  +-----| (100)
+|         |        +--SAMD9L_Monodelphis_domestica
+|     +---| (100)
+|     |   |                                                       +--SAMD9_Antechinus_flavipes
+|     |   |                                                    +--| (100)
+|     |   |                                                    |  |  +--SAMD9_Dasyurus_viverrinus
+|     |   |                                                    |  +--| (100)
+|     |   |                                                    |     +--SAMD9_Sarcophilus_harrisii
+|     |   |                                                 +--| (100)
+|     |   |                                                 |  +--SAMD9_Sminthopsis_crassicaudata
+|     |   |                                              +--| (100)
+|     |   |                                              |  |  +--SAMD9_Myrmecobius_fasciatus
+|     |   |                                              |  +--| (83)
+|     |   |                                              |     +--SAMD9_Thylacinus_cynocephalus
+|     |   |                                           +--| (59)
+|     |   |                                           |  |            +--SAMD9_Lagorchestes_hirsutus
+|     |   |                                           |  |         +--| (99)
+|     |   |                                           |  |         |  |     +--SAMD9_Macropus_fuliginosus
+|     |   |                                           |  |         |  |  +--| (99)
+|     |   |                                           |  |         |  |  |  +--SAMD9_Macropus_giganteus
+|     |   |                                           |  |         |  +--| (100)
+|     |   |                                           |  |         |     +--SAMD9_Notamacropus_eugenii
+|     |   |                                           |  |     +---| (100)
+|     |   |                                           |  |     |   +--SAMD9_Potorous_gilbertii
+|     |   |                                           |  |  +--| (98)
+|     |   |                                           |  |  |  |     +--SAMD9_Phalanger_gymnotis
+|     |   |                                           |  |  |  |  +--| (100)
+|     |   |                                           |  |  |  |  |  +--SAMD9_Trichosurus_vulpecula
+|     |   |                                           |  |  |  +--| (74)
+|     |   |                                           |  |  |     |  +--SAMD9_Pseudocheirus_occidentalis
+|     |   |                                           |  |  |     +--| (100)
+|     |   |                                           |  |  |        |  +--SAMD9_Pseudochirops_corinnae
+|     |   |                                           |  |  |        +--| (100)
+|     |   |                                           |  |  |           +--SAMD9_Pseudochirops_cupreus
+|     |   |                                           |  +--| (89)
+|     |   |                                           |     +--SAMD9_Vombatus_ursinus
+|     |   |                                        +--| (73)
+|     |   |                                        |  +-----SAMD9_Dromiciops_gliroides
+|     |   |                                   +----| (96)
+|     |   |                                   |    +---------SAMD9_Macrotis_lagotis
+|     |   +-----------------------------------| (100)
+|     |                                       |      +----SAMD9_Gracilinanus_agilis
+|     |                                       +------| (100)
+|     |                                              +--SAMD9_Monodelphis_domestica
+|  +--| (100)
+|  |  |  +--SAMD9L_Myrmecobius_fasciatus
+|  |  +--| (93)
+|  |     +---SAMD9L_Thylacinus_cynocephalus
++--| (95)
+   +--SAMD9L_Sminthopsis_crassicaudata
+
+
+Consensus tree in newick format: 
+
+(SAMD9L_Antechinus_flavipes:0.0260034715,(SAMD9L_Dasyurus_viverrinus:0.0048477721,SAMD9L_Sarcophilus_harrisii:0.0049726028)100:0.0151857251,(((((SAMD9L_Dromiciops_gliroides:0.0616150788,((((((SAMD9L_Lagorchestes_hirsutus:0.0147860650,((SAMD9L_Macropus_fuliginosus:0.0061597993,SAMD9L_Macropus_giganteus:0.0039570540)88:0.0045507420,SAMD9L_Notamacropus_eugenii:0.0107755874)96:0.0040489553)82:0.0044930147,SAMD9L_Potorous_gilbertii:0.0212396437)100:0.0416519223,(SAMD9L_Phalanger_gymnotis:0.0313949217,SAMD9L_Trichosurus_vulpecula:0.0147032373)100:0.0259245883)94:0.0053089232,(SAMD9L_Pseudocheirus_occidentalis:0.0301815955,(SAMD9L_Pseudochirops_corinnae:0.0061559810,SAMD9L_Pseudochirops_cupreus:0.0168897769)99:0.0095773100)100:0.0372240289)95:0.0074916407,SAMD9L_Vombatus_ursinus:0.0582513666)100:0.0393361045,SAMD9L_Macrotis_lagotis:0.0778613276)49:0.0036084527)53:0.0057879734,(SAMD9L_Gracilinanus_agilis:0.0294373450,SAMD9L_Monodelphis_domestica:0.0422274083)100:0.0704612663)64:0.0096077355,(((((((SAMD9_Antechinus_flavipes:0.0107484972,(SAMD9_Dasyurus_viverrinus:0.0101674641,SAMD9_Sarcophilus_harrisii:0.0067704071)100:0.0137982254)100:0.0111763756,SAMD9_Sminthopsis_crassicaudata:0.0255243113)100:0.0145648981,(SAMD9_Myrmecobius_fasciatus:0.0301672721,SAMD9_Thylacinus_cynocephalus:0.0334556557)83:0.0050701669)100:0.0340144161,((((SAMD9_Lagorchestes_hirsutus:0.0115445445,((SAMD9_Macropus_fuliginosus:0.0000029530,SAMD9_Macropus_giganteus:0.0010815472)99:0.0038282515,SAMD9_Notamacropus_eugenii:0.0126995993)100:0.0112201922)99:0.0089571462,SAMD9_Potorous_gilbertii:0.0327030437)100:0.0441116674,((SAMD9_Phalanger_gymnotis:0.0213873808,SAMD9_Trichosurus_vulpecula:0.0210536651)100:0.0270694037,(SAMD9_Pseudocheirus_occidentalis:0.0318344146,(SAMD9_Pseudochirops_corinnae:0.0109128909,SAMD9_Pseudochirops_cupreus:0.0044673039)100:0.0198022145)100:0.0265249647)74:0.0057890181)98:0.0105819649,SAMD9_Vombatus_ursinus:0.0428340371)89:0.0103185427)59:0.0066771148,SAMD9_Dromiciops_gliroides:0.0657835638)73:0.0125158185,SAMD9_Macrotis_lagotis:0.1117388096)96:0.0581125536,(SAMD9_Gracilinanus_agilis:0.0561418755,SAMD9_Monodelphis_domestica:0.0376725546)100:0.0828904812)100:0.3951701110)100:0.0473493240,(SAMD9L_Myrmecobius_fasciatus:0.0310103099,SAMD9L_Thylacinus_cynocephalus:0.0518274985)93:0.0065273957)100:0.0205069086,SAMD9L_Sminthopsis_crassicaudata:0.0203564647)95:0.0091744793);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t SAMD9-SAMD9L.1kb_window.1-1000.aln.treefile -m "TIM3{1.71442,5.28289,6.67187}+F{0.373139,0.178905,0.201757,0.2462}+I{0.19834}+G4{3.0578}" --length 1000
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s SAMD9-SAMD9L.1kb_window.1-1000.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s SAMD9-SAMD9L.1kb_window.1-1000.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Fri Dec 20 14:32:27 2024
+Total CPU time used: 510.996178 seconds (0h:8m:30s)
+Total wall-clock time used: 221.6281009 seconds (0h:3m:41s)
+
