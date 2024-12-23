@@ -1,0 +1,97 @@
+
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.1
+
+
+>code –> Universal
+/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/SAMD9/FEL/Dasyurus_viverrinus_treeLabled.txt
+Dasyurus_viverrinus_treeLabled.txt
+
+>Loaded a multiple sequence alignment with **21** sequences, **1590** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/SAMD9/FEL/SAMD9.aln`
+
+>branches –> fg
+
+>srv –> Yes
+Yes
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue –> 0.1
+
+>ci –> No
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample –> 0
+
+
+### Branches to include in the FEL analysis
+Selected 1 branches to include in FEL calculations: `Dasyurus_viverrinus`
+
+>precision –> standard
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths –> Yes
+* Log(L) = -27155.93, AIC-c = 54405.90 (47 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.883
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -26682.56, AIC-c = 53475.30 (55 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.891
+* non-synonymous/synonymous rate ratio for *background* =   0.6103
+* non-synonymous/synonymous rate ratio for *test* =   0.5123
+
+>full-model –> Yes
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -26672.99
+* non-synonymous/synonymous rate ratio for *background* =   0.5861
+* non-synonymous/synonymous rate ratio for *test* =   0.4035
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+[0;31m|       17       |       1        |        0.000   |       49.968   |        6.540   |  Pos. p = 0.0105  |
+[0m[0;31m|       51       |       1        |        0.000   |       37.020   |        6.756   |  Pos. p = 0.0093  |
+[0m[0;31m|      164       |       1        |        0.975   |       55.486   |        4.199   |  Pos. p = 0.0404  |
+[0m[0;31m|      169       |       1        |        1.691   |       70.698   |        4.176   |  Pos. p = 0.0410  |
+[0m[0;31m|      259       |       1        |        1.019   |       42.470   |        4.304   |  Pos. p = 0.0380  |
+[0m[0;31m|      660       |       1        |        0.437   |       75.576   |        6.123   |  Pos. p = 0.0133  |
+[0m[0;31m|      670       |       1        |        0.000   |       30.333   |        3.639   |  Pos. p = 0.0564  |
+[0m[0;31m|      776       |       1        |        1.921   |       60.242   |        3.988   |  Pos. p = 0.0458  |
+[0m[0;31m|      782       |       1        |        0.983   |       43.210   |        4.432   |  Pos. p = 0.0353  |
+[0m[0;31m|      815       |       1        |        0.000   |     7786.057   |       12.382   |  Pos. p = 0.0004  |
+[0m[0;31m|      952       |       1        |        0.000   |       27.045   |        5.862   |  Pos. p = 0.0155  |
+[0m[0;31m|      1030      |       1        |        2.960   |       50.037   |        3.063   |  Pos. p = 0.0801  |
+[0m[0;31m|      1176      |       1        |        0.000   |     5218.618   |       14.298   |  Pos. p = 0.0002  |
+[0m[0;31m|      1177      |       1        |        0.991   |       44.893   |        4.490   |  Pos. p = 0.0341  |
+[0m[0;31m|      1223      |       1        |        1.040   |       44.022   |        4.467   |  Pos. p = 0.0346  |
+[0m[0;31m|      1255      |       1        |        0.000   |       48.703   |        5.157   |  Pos. p = 0.0232  |
+[0m[0;31m|      1297      |       1        |        0.000   |       43.151   |        7.523   |  Pos. p = 0.0061  |
+[0m[0;31m|      1313      |       1        |        3.261   |     5921.410   |        3.082   |  Pos. p = 0.0792  |
+[0m[0;31m|      1552      |       1        |        0.000   |       36.982   |        7.169   |  Pos. p = 0.0074  |
+[0m[0;31m|      1553      |       1        |        0.918   |       39.637   |        4.611   |  Pos. p = 0.0318  |
+[0m
+### ** Found _20_ sites under pervasive positive diversifying and _0_ sites under negative selection at p <= 0.1**
+

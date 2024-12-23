@@ -1,0 +1,147 @@
+
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.1
+
+
+>code –> Universal
+/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/SAMD9L/FEL/Dromiciops_gliroides_treeLabled.txt
+Dromiciops_gliroides_treeLabled.txt
+
+>Loaded a multiple sequence alignment with **21** sequences, **1594** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/SAMD9L/FEL/SAMD9L.aln`
+
+>branches –> fg
+
+>srv –> Yes
+Yes
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue –> 0.1
+
+>ci –> No
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample –> 0
+
+
+### Branches to include in the FEL analysis
+Selected 1 branches to include in FEL calculations: `Dromiciops_gliroides`
+
+>precision –> standard
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths –> Yes
+* Log(L) = -24998.85, AIC-c = 50091.75 (47 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.764
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -24450.85, AIC-c = 49011.88 (55 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.772
+* non-synonymous/synonymous rate ratio for *background* =   0.4826
+* non-synonymous/synonymous rate ratio for *test* =   0.4590
+
+>full-model –> Yes
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -24434.86
+* non-synonymous/synonymous rate ratio for *background* =   0.4590
+* non-synonymous/synonymous rate ratio for *test* =   0.4050
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+[0;31m|       25       |       1        |        0.000   |       11.807   |        3.566   |  Pos. p = 0.0590  |
+[0m[0;31m|       50       |       1        |        0.000   |        6.016   |        3.987   |  Pos. p = 0.0459  |
+[0m[0;32m|       66       |       1        |    10000.000   |        0.048   |        7.992   |  Neg. p = 0.0047  |
+[0m[0;31m|       83       |       1        |        0.000   |        9.819   |        4.399   |  Pos. p = 0.0360  |
+[0m[0;31m|       84       |       1        |        0.000   |       19.472   |        6.153   |  Pos. p = 0.0131  |
+[0m[0;31m|      106       |       1        |        0.000   |        5.170   |        2.904   |  Pos. p = 0.0884  |
+[0m[0;31m|      120       |       1        |        0.000   |       12.714   |        3.503   |  Pos. p = 0.0613  |
+[0m[0;31m|      124       |       1        |        0.000   |        6.530   |        2.847   |  Pos. p = 0.0915  |
+[0m[0;32m|      126       |       1        |        7.480   |        0.000   |        2.776   |  Neg. p = 0.0957  |
+[0m[0;31m|      142       |       1        |        0.000   |        6.508   |        3.099   |  Pos. p = 0.0783  |
+[0m[0;31m|      143       |       1        |        1.546   |      817.313   |        3.425   |  Pos. p = 0.0642  |
+[0m[0;31m|      152       |       1        |        0.000   |        5.809   |        3.324   |  Pos. p = 0.0683  |
+[0m[0;31m|      157       |       1        |        0.792   |      114.620   |        7.083   |  Pos. p = 0.0078  |
+[0m[0;31m|      171       |       1        |        0.000   |       10.935   |        4.783   |  Pos. p = 0.0287  |
+[0m[0;31m|      269       |       1        |        0.000   |        6.519   |        2.708   |  Pos. p = 0.0998  |
+[0m[0;32m|      286       |       1        |       13.078   |        0.000   |        3.459   |  Neg. p = 0.0629  |
+[0m[0;31m|      317       |       1        |        0.000   |       20.357   |        7.103   |  Pos. p = 0.0077  |
+[0m[0;31m|      325       |       1        |        1.462   |       34.006   |        4.306   |  Pos. p = 0.0380  |
+[0m[0;31m|      338       |       1        |        0.000   |        5.721   |        3.442   |  Pos. p = 0.0636  |
+[0m[0;31m|      350       |       1        |        1.820   |      651.182   |        4.112   |  Pos. p = 0.0426  |
+[0m[0;31m|      457       |       1        |        0.670   |       11.199   |        3.019   |  Pos. p = 0.0823  |
+[0m[0;31m|      475       |       1        |        0.000   |        4.730   |        2.806   |  Pos. p = 0.0939  |
+[0m[0;31m|      510       |       1        |        0.000   |       11.626   |        3.979   |  Pos. p = 0.0461  |
+[0m[0;31m|      578       |       1        |        0.000   |        9.113   |        3.266   |  Pos. p = 0.0707  |
+[0m[0;31m|      587       |       1        |        0.000   |       10.611   |        5.522   |  Pos. p = 0.0188  |
+[0m[0;31m|      590       |       1        |        0.000   |       11.644   |        3.809   |  Pos. p = 0.0510  |
+[0m[0;32m|      608       |       1        |        6.416   |        0.000   |        2.748   |  Neg. p = 0.0974  |
+[0m[0;31m|      757       |       1        |        0.000   |     3286.672   |        3.457   |  Pos. p = 0.0630  |
+[0m[0;31m|      758       |       1        |        0.000   |        5.482   |        2.980   |  Pos. p = 0.0843  |
+[0m[0;31m|      759       |       1        |        0.000   |        6.857   |        3.874   |  Pos. p = 0.0490  |
+[0m[0;31m|      770       |       1        |        0.000   |       18.191   |        6.702   |  Pos. p = 0.0096  |
+[0m[0;31m|      772       |       1        |        0.982   |       32.953   |        6.062   |  Pos. p = 0.0138  |
+[0m[0;31m|      789       |       1        |        0.000   |        6.027   |        3.166   |  Pos. p = 0.0752  |
+[0m[0;31m|      809       |       1        |        0.000   |        8.414   |        3.452   |  Pos. p = 0.0632  |
+[0m[0;31m|      813       |       1        |        0.000   |      756.751   |        5.170   |  Pos. p = 0.0230  |
+[0m[0;31m|      817       |       1        |        0.000   |        4.351   |        3.391   |  Pos. p = 0.0655  |
+[0m[0;31m|      843       |       1        |        0.000   |     1163.039   |        7.551   |  Pos. p = 0.0060  |
+[0m[0;31m|      860       |       1        |        0.000   |      684.220   |        3.599   |  Pos. p = 0.0578  |
+[0m[0;31m|      875       |       1        |        0.000   |        6.038   |        4.066   |  Pos. p = 0.0438  |
+[0m[0;32m|      876       |       1        |       15.642   |        0.000   |        3.047   |  Neg. p = 0.0809  |
+[0m[0;32m|      882       |       1        |        7.677   |        0.000   |        2.707   |  Neg. p = 0.0999  |
+[0m[0;31m|      911       |       1        |        0.000   |       18.677   |        3.268   |  Pos. p = 0.0707  |
+[0m[0;31m|      912       |       1        |        1.831   |      801.896   |        3.885   |  Pos. p = 0.0487  |
+[0m[0;31m|      915       |       1        |        0.000   |        7.772   |        3.294   |  Pos. p = 0.0695  |
+[0m[0;32m|      928       |       1        |       29.017   |        0.000   |        2.871   |  Neg. p = 0.0902  |
+[0m[0;31m|      930       |       1        |        0.000   |        4.373   |        3.211   |  Pos. p = 0.0731  |
+[0m[0;31m|      966       |       1        |        0.811   |     1109.067   |        3.024   |  Pos. p = 0.0820  |
+[0m[0;31m|      985       |       1        |        0.000   |        5.631   |        4.191   |  Pos. p = 0.0406  |
+[0m[0;31m|      991       |       1        |        0.000   |        5.711   |        2.753   |  Pos. p = 0.0971  |
+[0m[0;31m|      1002      |       1        |        0.000   |       17.377   |        6.231   |  Pos. p = 0.0126  |
+[0m[0;31m|      1073      |       1        |        0.915   |      505.426   |        3.426   |  Pos. p = 0.0642  |
+[0m[0;31m|      1102      |       1        |        0.000   |        9.962   |        2.721   |  Pos. p = 0.0990  |
+[0m[0;31m|      1145      |       1        |        0.000   |      735.941   |        5.230   |  Pos. p = 0.0222  |
+[0m[0;31m|      1172      |       1        |        0.000   |        8.670   |        3.107   |  Pos. p = 0.0779  |
+[0m[0;31m|      1175      |       1        |        1.532   |      795.058   |        7.835   |  Pos. p = 0.0051  |
+[0m[0;32m|      1191      |       1        |       17.869   |        0.000   |        3.111   |  Neg. p = 0.0778  |
+[0m[0;31m|      1216      |       1        |        0.000   |        5.848   |        3.281   |  Pos. p = 0.0701  |
+[0m[0;31m|      1264      |       1        |        0.000   |        8.349   |        4.686   |  Pos. p = 0.0304  |
+[0m[0;31m|      1301      |       1        |        0.000   |       11.853   |        3.597   |  Pos. p = 0.0579  |
+[0m[0;32m|      1316      |       1        |       47.381   |        0.000   |        3.008   |  Neg. p = 0.0829  |
+[0m[0;31m|      1328      |       1        |        0.701   |       17.004   |        4.127   |  Pos. p = 0.0422  |
+[0m[0;31m|      1329      |       1        |        0.000   |        6.231   |        3.811   |  Pos. p = 0.0509  |
+[0m[0;31m|      1330      |       1        |        0.000   |        5.912   |        3.026   |  Pos. p = 0.0819  |
+[0m[0;31m|      1337      |       1        |        0.000   |        5.523   |        3.116   |  Pos. p = 0.0775  |
+[0m[0;31m|      1366      |       1        |        0.000   |        6.540   |        3.169   |  Pos. p = 0.0750  |
+[0m[0;31m|      1387      |       1        |        0.106   |    10000.000   |        2.735   |  Pos. p = 0.0982  |
+[0m[0;31m|      1430      |       1        |        0.000   |        5.499   |        2.960   |  Pos. p = 0.0853  |
+[0m[0;31m|      1431      |       1        |        1.084   |      837.018   |        3.632   |  Pos. p = 0.0567  |
+[0m[0;31m|      1441      |       1        |        0.000   |        9.551   |        4.988   |  Pos. p = 0.0255  |
+[0m[0;32m|      1524      |       1        |       17.405   |        0.000   |        3.214   |  Neg. p = 0.0730  |
+[0m
+### ** Found _60_ sites under pervasive positive diversifying and _10_ sites under negative selection at p <= 0.1**
+

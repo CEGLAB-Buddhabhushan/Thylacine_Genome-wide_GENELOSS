@@ -1,0 +1,82 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 3.0
+
+
+>code –> Universal
+/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/CUZD1/MEME/Monodelphis_domestica_treeLabled.txt
+Monodelphis_domestica_treeLabled.txt
+
+>Loaded a multiple sequence alignment with **21** sequences, **691** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/CUZD1/MEME/CUZD1.aln`
+
+>branches –> fg
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue –> 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample –> 0
+
+
+### Branches to include in the MEME analysis
+Selected 1 branches to include in the MEME analysis: `Monodelphis_domestica`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths –> Yes
+* Log(L) = -10497.63, AIC-c = 21089.37 (47 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.093
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -10269.79, AIC-c = 20650.02 (55 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.116
+* non-synonymous/synonymous rate ratio for *background* =   0.4479
+* non-synonymous/synonymous rate ratio for *test* =   0.2350
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+
+>full-model –> Yes
+* Log(L) = -10256.55
+* non-synonymous/synonymous rate ratio for *background* =   0.4207
+* non-synonymous/synonymous rate ratio for *test* =   0.1355
+
+### For partition 1 these sites are significant at p <=0.1
+
+|   Codon    | Partition  |   alpha    |   beta+    |     p+     |    LRT     |Episodic selection detected?| # branches |Most common codon substitutions at this site|
+|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:--------------------------:|:----------:|:------------------------------------------:|
+|     59     |     1      |    0.000   |    9.839   |    1.000   |    4.971   |      Yes, p =  0.0383      |     1      |         [1]aaC>aaA,Aac>Cac,AaC>GaA         |
+|     61     |     1      |    0.000   |   10.513   |    1.000   |    4.188   |      Yes, p =  0.0574      |     1      |       [2]aaT>aaG|[1]aaT>aaA,Aat>Gat        |
+|    107     |     1      |    0.000   |    9.169   |    1.000   |    4.140   |      Yes, p =  0.0588      |     1      |     [1]Gag>Aag,Gat>Aat,gaT>gaA,gaT>gaG     |
+|    200     |     1      |    0.000   |   14.203   |    1.000   |    4.377   |      Yes, p =  0.0520      |     1      |         [1]aAa>aTa,Aaa>Caa,Ata>Gta         |
+|    203     |     1      |    0.432   |   15.796   |    1.000   |    4.034   |      Yes, p =  0.0622      |     1      |         [1]Cta>Ata,ctA>ctG,CTa>GCa         |
+|    313     |     1      |    0.000   |   19.078   |    1.000   |    4.883   |      Yes, p =  0.0401      |     1      |                 [1]aAt>aTt                 |
+|    437     |     1      |    0.000   |    8.369   |    1.000   |    3.741   |      Yes, p =  0.0724      |     1      |                 [1]gaT>gaA                 |
+
+### ** Found _7_ sites under episodic diversifying positive selection at p <= 0.1**
+

@@ -1,0 +1,151 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch.
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Less Is More: An Adaptive Branch-Site Random Effects Model for Efficient
+Detection of Episodic Diversifying Selection (2015). Mol Biol Evol 32
+(5): 1342-1353. v2.2 adds support for multiple-hit models. v2.3 adds
+support for SRV
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.3
+
+
+>code –> Universal
+/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/HSD17B13/aBSREL/Antechinus_flavipes_treeLabled.txt
+Antechinus_flavipes_treeLabled.txt
+
+>Loaded a multiple sequence alignment with **21** sequences, **309** codons, and **1** partitions from `/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/HSD17B13/aBSREL/HSD17B13.aln`
+
+>branches –> fg
+
+>multiple-hits –> None
+
+>srv –> No
+
+
+### * Selected 1 branches for testing: `Antechinus_flavipes`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths –> Yes
+* Log(L) = -4270.33, AIC-c =  8634.90 (47 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.811
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -4107.81, AIC-c =  8402.30 (92 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.38, and 95% of the weight in  0.00 -  2.14
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|       Monodelphis_domestica       |   0.26   |    2     |   83.85 (18.54%)   |   -4079.39    |    8349.57    |     8349.57     |
+|       Monodelphis_domestica       |   0.26   |    3     |   83.46 (18.49%)   |   -4079.39    |    8353.69    |     8349.57     |
+|         Macrotis_lagotis          |   0.07   |    2     |   19.86 ( 1.17%)   |   -4075.78    |    8346.47    |     8346.47     |
+|         Macrotis_lagotis          |   0.07   |    3     |   20.02 ( 1.15%)   |   -4075.80    |    8350.63    |     8346.47     |
+|       Dromiciops_gliroides        |   0.06   |    2     |    1.51 (15.11%)   |   -4074.32    |    8347.67    |     8346.47     |
+|              Node37               |   0.05   |    2     |    0.14 (76.50%)   |   -4075.78    |    8350.59    |     8346.47     |
+|         Vombatus_ursinus          |   0.05   |    2     |    0.16 (22.43%)   |   -4075.78    |    8350.59    |     8346.47     |
+|              Node31               |   0.03   |    2     |   34.80 ( 2.00%)   |   -4070.45    |    8339.94    |     8339.94     |
+|              Node31               |   0.03   |    3     |   34.36 ( 1.99%)   |   -4070.45    |    8344.07    |     8339.94     |
+|               Node4               |   0.03   |    2     |   17.66 ( 1.26%)   |   -4068.93    |    8341.02    |     8339.94     |
+|        Phalanger_gymnotis         |   0.02   |    2     |    5.80 (11.54%)   |   -4069.06    |    8341.29    |     8339.94     |
+|              Node21               |   0.02   |    2     |    3.85 (10.01%)   |   -4069.53    |    8342.22    |     8339.94     |
+|     Sminthopsis_crassicaudata     |   0.02   |    2     |    0.34 (55.51%)   |   -4070.45    |    8344.07    |     8339.94     |
+|    Pseudocheirus_occidentalis     |   0.02   |    2     |    0.54 (53.78%)   |   -4070.45    |    8344.07    |     8339.94     |
+|      Thylacinus_cynocephalus      |   0.02   |    2     |    0.39 (92.06%)   |   -4070.45    |    8344.07    |     8339.94     |
+|              Node18               |   0.02   |    2     |    0.10 (56.95%)   |   -4070.45    |    8344.07    |     8339.94     |
+|        Potorous_gilbertii         |   0.02   |    2     |    0.24 (23.14%)   |   -4070.45    |    8344.07    |     8339.94     |
+|              Node30               |   0.02   |    2     |    0.14 (55.13%)   |   -4070.45    |    8344.07    |     8339.94     |
+|        Antechinus_flavipes        |   0.01   |    2     |    0.34 (55.58%)   |   -4070.45    |    8344.07    |     8339.94     |
+|       Trichosurus_vulpecula       |   0.01   |    2     |    0.35 (47.55%)   |   -4070.45    |    8344.07    |     8339.94     |
+|       Myrmecobius_fasciatus       |   0.01   |    2     |    0.26 (23.91%)   |   -4070.45    |    8344.07    |     8339.94     |
+|               Node8               |   0.01   |    2     |    0.16 (77.64%)   |   -4070.45    |    8344.07    |     8339.94     |
+|       Lagorchestes_hirsutus       |   0.01   |    2     |    0.25 (10.00%)   |   -4070.45    |    8344.07    |     8339.94     |
+|        Gracilinanus_agilis        |   0.01   |    2     |    0.49 (77.25%)   |   -4070.35    |    8343.86    |     8339.94     |
+|       Pseudochirops_cupreus       |   0.01   |    2     |   2.28 (100.00%)   |   -4070.44    |    8344.04    |     8339.94     |
+|               Node1               |   0.01   |    2     |    0.25 (10.00%)   |   -4070.45    |    8344.06    |     8339.94     |
+|              Node15               |   0.01   |    2     |    0.50 (50.33%)   |   -4070.45    |    8344.07    |     8339.94     |
+|              Node12               |   0.00   |    2     |    0.00 ( 5.00%)   |   -4070.45    |    8344.07    |     8339.94     |
+|      Pseudochirops_corinnae       |   0.00   |    2     |    1.08 (68.24%)   |   -4070.42    |    8344.01    |     8339.94     |
+|       Notamacropus_eugenii        |   0.00   |    2     |    0.50 (10.00%)   |   -4070.45    |    8344.07    |     8339.94     |
+|              Node10               |   0.00   |    2     |    0.00 ( 5.00%)   |   -4070.45    |    8344.07    |     8339.94     |
+|        Macropus_giganteus         |   0.00   |    2     |    2.09 ( 0.04%)   |   -4070.45    |    8344.07    |     8339.94     |
+|       Sarcophilus_harrisii        |   0.00   |    2     |    0.92 ( 2.00%)   |   -4070.45    |    8344.07    |     8339.94     |
+|              Node23               |   0.00   |    2     |  958.65 ( 0.38%)   |   -4064.75    |    8332.67    |     8332.67     |
+|              Node23               |   0.00   |    3     |  926.42 ( 0.38%)   |   -4064.76    |    8336.81    |     8332.67     |
+|              Node26               |   0.00   |    2     |    0.75 ( 5.00%)   |   -4064.75    |    8336.80    |     8332.67     |
+|              Node17               |   0.00   |    2     |    2.04 ( 0.90%)   |   -4064.75    |    8336.79    |     8332.67     |
+|               Node6               |   0.00   |    2     |    0.75 ( 9.59%)   |   -4064.75    |    8336.79    |     8332.67     |
+|              Node16               |   0.00   |    2     |    0.25 ( 9.84%)   |   -4067.53    |    8342.34    |     8332.67     |
+|        Dasyurus_viverrinus        |   0.00   |    2     |    0.00 ( 5.00%)   |   -4064.75    |    8336.80    |     8332.67     |
+|              Node24               |   0.00   |    2     |    0.26 ( 2.00%)   |   -4070.17    |    8347.64    |     8332.67     |
+|               Node2               |   0.00   |    2     |    0.00 ( 3.02%)   |   -4064.75    |    8336.80    |     8332.67     |
+|       Macropus_fuliginosus        |   0.00   |    2     |    0.27 ( 2.00%)   |   -4064.75    |    8336.80    |     8332.67     |
+
+### Rate class analyses summary
+*  4 branches with **2** rate classes
+*  35 branches with **1** rate classes
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -4058.59, AIC-c =  8320.34 (100 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|--------------------|--------------------|
+|       Monodelphis_domestica       |     2    |   81.21 (17.82%)   |    Not selected    |    for testing     |
+|         Macrotis_lagotis          |     2    |   16.19 ( 1.15%)   |    Not selected    |    for testing     |
+|       Dromiciops_gliroides        |     1    |   0.18 (100.00%)   |    Not selected    |    for testing     |
+|              Node37               |     1    |   0.14 (100.00%)   |    Not selected    |    for testing     |
+|         Vombatus_ursinus          |     1    |   0.14 (100.00%)   |    Not selected    |    for testing     |
+|              Node31               |     2    |   26.34 ( 2.17%)   |    Not selected    |    for testing     |
+|               Node4               |     1    |   0.35 (100.00%)   |    Not selected    |    for testing     |
+|        Phalanger_gymnotis         |     1    |   0.52 (100.00%)   |    Not selected    |    for testing     |
+|              Node21               |     1    |   0.30 (100.00%)   |    Not selected    |    for testing     |
+|     Sminthopsis_crassicaudata     |     1    |   0.31 (100.00%)   |    Not selected    |    for testing     |
+|    Pseudocheirus_occidentalis     |     1    |   0.49 (100.00%)   |    Not selected    |    for testing     |
+|      Thylacinus_cynocephalus      |     1    |   0.34 (100.00%)   |    Not selected    |    for testing     |
+|              Node18               |     1    |   0.09 (100.00%)   |    Not selected    |    for testing     |
+|        Potorous_gilbertii         |     1    |   0.20 (100.00%)   |    Not selected    |    for testing     |
+|              Node30               |     1    |   0.12 (100.00%)   |    Not selected    |    for testing     |
+|        Antechinus_flavipes        |     1    |   0.30 (100.00%)   |        0.00        |       1.00000      |
+|       Trichosurus_vulpecula       |     1    |   0.29 (100.00%)   |    Not selected    |    for testing     |
+|       Myrmecobius_fasciatus       |     1    |   0.20 (100.00%)   |    Not selected    |    for testing     |
+|               Node8               |     1    |   0.15 (100.00%)   |    Not selected    |    for testing     |
+|       Lagorchestes_hirsutus       |     1    |   0.19 (100.00%)   |    Not selected    |    for testing     |
+|        Gracilinanus_agilis        |     1    |   0.39 (100.00%)   |    Not selected    |    for testing     |
+|       Pseudochirops_cupreus       |     1    |   2.17 (100.00%)   |    Not selected    |    for testing     |
+|               Node1               |     1    |   0.20 (100.00%)   |    Not selected    |    for testing     |
+|              Node15               |     1    |   0.39 (100.00%)   |    Not selected    |    for testing     |
+|              Node12               |     1    |   0.00 (100.00%)   |    Not selected    |    for testing     |
+|      Pseudochirops_corinnae       |     1    |   0.91 (100.00%)   |    Not selected    |    for testing     |
+|       Notamacropus_eugenii        |     1    |   0.38 (100.00%)   |    Not selected    |    for testing     |
+|              Node10               |     1    |   0.00 (100.00%)   |    Not selected    |    for testing     |
+|        Macropus_giganteus         |     1    |   0.76 (100.00%)   |    Not selected    |    for testing     |
+|       Sarcophilus_harrisii        |     1    |   0.73 (100.00%)   |    Not selected    |    for testing     |
+|              Node23               |     2    |  958.65 ( 0.38%)   |    Not selected    |    for testing     |
+|              Node26               |     1    |   0.38 (100.00%)   |    Not selected    |    for testing     |
+|              Node17               |     1    |   0.64 (100.00%)   |    Not selected    |    for testing     |
+|               Node6               |     1    |   0.24 (100.00%)   |    Not selected    |    for testing     |
+|              Node16               |     1    |  >1000 (100.00%)   |    Not selected    |    for testing     |
+|        Dasyurus_viverrinus        |     1    |   0.00 (100.00%)   |    Not selected    |    for testing     |
+|              Node24               |     1    |  >1000 (100.00%)   |    Not selected    |    for testing     |
+|               Node2               |     1    |   1.00 (100.00%)   |    Not selected    |    for testing     |
+|       Macropus_fuliginosus        |     1    |   1.00 (100.00%)   |    Not selected    |    for testing     |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **0** branches under selection among **1** tested.
+

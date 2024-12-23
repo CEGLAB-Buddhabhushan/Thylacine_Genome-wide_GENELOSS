@@ -1,0 +1,85 @@
+
+
+This example analysis fits the local MG94xREV model 
+(separate alpha and beta on each branch) to a codon dataset,
+and computes several distance measures between sequences:
+ - expected number of substitutions per codon
+ - expected number of syn. substitutions per codon
+ - expected number of nonsyn. substitutions per codon
+ - dS
+ - dN
+and provides the example contrasting the estimation of dN and dS
+between a pair of sequences based on the phylogenetic tree and
+direct pairwise estimation.
+
+
+			+-------------------+
+			|Choose Genetic Code|
+			+-------------------+
+
+
+	(1):[Universal] Universal code. (Genebank transl_table=1).
+	(2):[Vertebrate mtDNA] Vertebrate mitochondrial DNA code. (Genebank transl_table=2).
+	(3):[Yeast mtDNA] Yeast mitochondrial DNA code. (Genebank transl_table=3).
+	(4):[Mold/Protozoan mtDNA] Mold, Protozoan and Coelenterate mitochondrial DNA and the Mycloplasma/Spiroplasma code. (Genebank transl_table=4).
+	(5):[Invertebrate mtDNA] Invertebrate mitochondrial DNA code. (Genebank transl_table=5).
+	(6):[Ciliate Nuclear] Ciliate, Dasycladacean and Hexamita Nuclear code. (Genebank transl_table=6).
+	(7):[Echinoderm mtDNA] Echinoderm mitochondrial DNA code. (Genebank transl_table=9).
+	(8):[Euplotid Nuclear] Euplotid Nuclear code. (Genebank transl_table=10).
+	(9):[Alt. Yeast Nuclear] Alternative Yeast Nuclear code. (Genebank transl_table=12).
+	(10):[Ascidian mtDNA] Ascidian mitochondrial DNA code. (Genebank transl_table=13).
+	(11):[Flatworm mtDNA] Flatworm mitochondrial DNA code. (Genebank transl_table=14).
+	(12):[Blepharisma Nuclear] Blepharisma Nuclear code. (Genebank transl_table=15).
+	(13):[Chlorophycean mtDNA] Chlorophycean Mitochondrial Code (transl_table=16).
+	(14):[Trematode mtDNA] Trematode Mitochondrial Code (transl_table=21).
+	(15):[Scenedesmus obliquus mtDNA] Scenedesmus obliquus mitochondrial Code (transl_table=22).
+	(16):[Thraustochytrium mtDNA] Thraustochytrium Mitochondrial Code (transl_table=23).
+	(17):[Pterobranchia mtDNA] Pterobranchia Mitochondrial Code (transl_table=24).
+	(18):[SR1 and Gracilibacteria] Candidate Division SR1 and Gracilibacteria Code (transl_table=25).
+	(19):[Pachysolen Nuclear] Pachysolen tannophilus Nuclear Code (transl_table=26).
+
+Please choose an option (or press q to cancel selection):
+
+			+---------+
+			|Alignment|
+			+---------+
+
+
+	(1):[Flu H5N1 HA] Use the example Influenza H5N1 hemagglutinin alignment (5 sequences)
+	(2):[Drospophila adh] Use the example Drosophila ADH alignment (6 sequences).
+	(3):[Custom] Load your own alignment and tree.
+
+Please choose an option (or press q to cancel selection):
+Choose a nucleotide alignment (`/media/morpheus/sagar/BUDDHA/HYPHY_PAML_gBGC/19spCUZD1/gBGC/`) 
+
+A tree was found in the data file:
+(((Macrotis_lagotis:58,(Thylacinus_cynocephalus:38.47,(Myrmecobius_fasciatus:33.1855,(Sminthopsis_crassicaudata:24.59895,(Antechinus_flavipes:18.0355,(Sarcophilus_harrisii:9.44,Dasyurus_viverrinus:9.44):8.5955):6.56345):8.58655):5.2845):19.53):2.77164,((((Phalanger_gymnotis:25.35,Trichosurus_vulpecula:25.35):19.95,(Potorous_gilbertii:21.31,((Notamacropus_eugenii:7.37,(Macropus_fuliginosus:2.11,Macropus_giganteus:2.11):5.26):0.955,Lagorchestes_hirsutus:8.325):12.985):23.99):2.755,Pseudocheirus_occidentalis:48.055):4.585,Vombatus_ursinus:52.64):8.13164):2.22836,Dromiciops_gliroides:63,(Monodelphis_domestica:29.14096,Gracilinanus_agilis:29.14096):64.23264)
+
+Would you like to use it:(Y/N)?
+
+Fitting local MG94xREV to observed data... 
+
+Total nucleotide sites :1914
+Synonymous  sites      :433.908318972808
+Nonsynonymous  sites   :1401.139023919117
+
+Total tree lengths:
+	E[syn]        : 0.3782761880979312
+	E[non-syn]    : 0.4062293733161505
+	dS            : 1.668602772432241
+	dN            : 0.5549221078378844
+
+
+E[Syn subs/nucleotide site] tree: 
+	(((Macrotis_lagotis:0.03246539514601662,(Thylacinus_cynocephalus:0.06526912542423595,(Myrmecobius_fasciatus:0.01684094776998365,(Sminthopsis_crassicaudata:0.006508305104415204,(Antechinus_flavipes:0.009093003637547585,(Sarcophilus_harrisii:0.001711891269260656,Dasyurus_viverrinus:0.001675872445910319)Node12:0.007761092360592972)Node10:0.003819392320998424)Node8:0.00396195129936023)Node6:0)Node4:0.01995172993921786)Node2:0.002411201774135498,((((Phalanger_gymnotis:0.009972492215227039,Trichosurus_vulpecula:0.007167016274833168)Node18:0.01083524326605505,(Potorous_gilbertii:0.007574445212871807,((Notamacropus_eugenii:0.001134944053261163,(Macropus_fuliginosus:0,Macropus_giganteus:0.001143688573309544)Node26:0.001723931378848271)Node24:0,Lagorchestes_hirsutus:0.003452101198851867)Node23:0.006199118016977209)Node21:0.01565972379808541)Node17:0.00295355101551565,Pseudocheirus_occidentalis:0.0260988579048764)Node16:0.003932340690418938,Vombatus_ursinus:0.02100135956881922)Node15:0.004862228645992372)Node1:0.004622177779765447,Dromiciops_gliroides:0.02655414975095837,(Monodelphis_domestica:0.01716016296212657,Gracilinanus_agilis:0.01037518075572713)Node33:0.02438356654373564)
+
+E[Non-syn subs/nucleotide site] tree: 
+	(((Macrotis_lagotis:0.02581127196589591,(Thylacinus_cynocephalus:0.1227188078019402,(Myrmecobius_fasciatus:0.01515716069378246,(Sminthopsis_crassicaudata:0.009031406438923032,(Antechinus_flavipes:0.003942300321522825,(Sarcophilus_harrisii:0.003051119952942164,Dasyurus_viverrinus:0.0007907373900131589)Node12:0.004668864511426853)Node10:0.001591141566676028)Node8:0.003932430665835057)Node6:0.001047311109854795)Node4:0.01073089209423927)Node2:0.001375693124398862,((((Phalanger_gymnotis:0.01025640189526958,Trichosurus_vulpecula:0.003900031176593145)Node18:0.01378447212140712,(Potorous_gilbertii:0.008027406907309487,((Notamacropus_eugenii:0.001118202785856663,(Macropus_fuliginosus:0,Macropus_giganteus:0.0005578074799533834)Node26:0.0005568584164478822)Node24:0.002793139639807653,Lagorchestes_hirsutus:0.003374491045309208)Node23:0.004978612241211683)Node21:0.01091720319561702)Node17:0.001056226766149479,Pseudocheirus_occidentalis:0.03026648159910019)Node16:0.00398401899114402,Vombatus_ursinus:0.0225134532366593)Node15:0.01161682888101498)Node1:0.0003759325594086096,Dromiciops_gliroides:0.02823655452515336,(Monodelphis_domestica:0.006589781079480809,Gracilinanus_agilis:0.007496847638059938)Node33:0.02997948349774647)
+
+dS tree: 
+	(((Macrotis_lagotis:0.1432071329182557,(Thylacinus_cynocephalus:0.287906685812623,(Myrmecobius_fasciatus:0.07428660069955634,(Sminthopsis_crassicaudata:0.02870858986833886,(Antechinus_flavipes:0.04010987621409661,(Sarcophilus_harrisii:0.007551272345092395,Dasyurus_viverrinus:0.007392390791367532)Node12:0.03423472224118814)Node10:0.01684760716203071)Node8:0.01747644480503887)Node6:0)Node4:0.0880084788281188)Node2:0.01063597998448275,((((Phalanger_gymnotis:0.04398936195814377,Trichosurus_vulpecula:0.03161421099854584)Node18:0.04779501729841001,(Potorous_gilbertii:0.03341140859377062,((Notamacropus_eugenii:0.005006317747224382,(Macropus_fuliginosus:0,Macropus_giganteus:0.005044890437907569)Node26:0.007604382112163121)Node24:0,Lagorchestes_hirsutus:0.01522746028526026)Node23:0.02734474396015887)Node21:0.06907613898827739)Node17:0.01302832049194065,Pseudocheirus_occidentalis:0.1151238910288417)Node16:0.01734583033411147,Vombatus_ursinus:0.09263846867439068)Node15:0.02144763126565593)Node1:0.02038875007378109,Dromiciops_gliroides:0.1171322152653159,(Monodelphis_domestica:0.07569468128028342,Gracilinanus_agilis:0.04576564932765483)Node33:0.1075576206402134)
+
+dN tree: 
+	(((Macrotis_lagotis:0.03525900977658919,(Thylacinus_cynocephalus:0.1676377533729105,(Myrmecobius_fasciatus:0.02070515849794384,(Sminthopsis_crassicaudata:0.01233718541058675,(Antechinus_flavipes:0.005385306301932155,(Sarcophilus_harrisii:0.00416792587333462,Dasyurus_viverrinus:0.001080172158970968)Node12:0.006377815850047194)Node10:0.002173549452715637)Node8:0.005371824041668252)Node6:0.001430659934554642)Node4:0.01465873629793329)Node2:0.001879240100482292,((((Phalanger_gymnotis:0.01401056775410974,Trichosurus_vulpecula:0.005327565319763866)Node18:0.01883002271007782,(Potorous_gilbertii:0.01096569045490899,((Notamacropus_eugenii:0.001527500194907998,(Macropus_fuliginosus:0,Macropus_giganteus:0.0007619825716112576)Node26:0.0007606861209960657)Node24:0.003815516647047909,Lagorchestes_hirsutus:0.004609660961876591)Node23:0.006800940996579683)Node21:0.01491324312555669)Node17:0.001442839001625583,Pseudocheirus_occidentalis:0.04134496633934441)Node16:0.005442295317505799,Vombatus_ursinus:0.03075408561131717)Node15:0.01586895382877167)Node1:0.0005135357066106634,Dromiciops_gliroides:0.03857202207527936,(Monodelphis_domestica:0.009001848332542316,Gracilinanus_agilis:0.01024092979661028)Node33:0.04095291790117121)
+
+Estimating pairwise dN/dS: total of 171 analyses
