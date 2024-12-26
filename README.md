@@ -10,7 +10,7 @@ Computational Evolutionary Genomics Lab, Department of Biological Sciences, IISE
 
 ____________________________________________________________________________________________________________________________________________________
 ## Graphical abstract
-![graphical_abstract](https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/blob/main/Main_figures/graphical_abstract.jpg)
+![Thylacine]([https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/blob/main/Main_figures/graphical_abstract.jpg](https://github.com/CEGLAB-Buddhabhushan/Thylacine_Genome-wide_GENELOSS/blob/main/Main_Figures/Tiger3.png))
 ____________________________________________________________________________________________________________________________________________________
 **Folder Structure**
 - **Chromosome_wise_Chains_and_TOGA_results:** Contains the output files of make_lastz_chains and TOGA.
