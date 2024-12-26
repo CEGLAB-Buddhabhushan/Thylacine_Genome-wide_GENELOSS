@@ -9,7 +9,7 @@ Computational Evolutionary Genomics Lab, Department of Biological Sciences, IISE
 *Author for Correspondence: Nagarjun Vijay, nagarjun@iiserb.ac.in
 
 ____________________________________________________________________________________________________________________________________________________
-## Graphical abstract
+## Thylacine (_Thylacinus_ _cynocephalus_), also commonly known as the Tasmanian tiger or Tasmanian wolf.
 ![Thylacine]([https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/blob/main/Main_figures/graphical_abstract.jpg](https://github.com/CEGLAB-Buddhabhushan/Thylacine_Genome-wide_GENELOSS/blob/main/Main_Figures/Tiger3.png))
 ____________________________________________________________________________________________________________________________________________________
 **Folder Structure**
