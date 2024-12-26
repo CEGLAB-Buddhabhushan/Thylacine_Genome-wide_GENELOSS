@@ -9,6 +9,9 @@ Computational Evolutionary Genomics Lab, Department of Biological Sciences, IISE
 *Author for Correspondence: Nagarjun Vijay, nagarjun@iiserb.ac.in
 
 ____________________________________________________________________________________________________________________________________________________
+## Graphical abstract
+![graphical_abstract](https://github.com/CEGLAB-Buddhabhushan/WDR93_CFAP46/blob/main/Main_figures/graphical_abstract.jpg)
+____________________________________________________________________________________________________________________________________________________
 **Folder Structure**
 - **Chromosome_wise_Chains_and_TOGA_results:** Contains the output files of make_lastz_chains and TOGA.
 - **Figure1:** Contains the gene loss confirmation genes losses in thylacine and other marsupial species, IGV-reports, and gene loss history. **(Figure 1, figure S2, figure S5, figure S6, figure S7 and figure S8)**
