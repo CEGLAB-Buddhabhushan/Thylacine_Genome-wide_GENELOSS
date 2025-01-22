@@ -32,6 +32,7 @@ ________________________________________________________________________________
 - **Thylacine_transcriptome-miRNA:** Contains BLASTn search output for lost genes and control genes in the miRNA database of thylacine.
 - **TOGA_output_sorted:** Contains the sorted output files of TOGA, such as inact_mut_data.txt and loss_summ_data.tsv, codon.fasta, nucleotide.fasta.tgz, prot.fasta, query_annotation.bed, and query_gene_spans.bed. Also, a mutation plot was generated using TOGA. **(Figure 1)**
 - **Synteny:** Contains the NCBI synteny images for _SAMD9L_, _HSD17B13_, _CUZD1_ and _VWA7_. **(figure S5 and tables S2)**
+- **_SAMD9_ gene loss:** 
 ____________________________________________________________________________________________________________________________________________________
 **Prerequisites:**
 - TOGA (1.1.7)
