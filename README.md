@@ -14,7 +14,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________________
 **Folder Structure**
 - **Chromosome_wise_Chains_and_TOGA_results:** Contains the output files of make_lastz_chains and TOGA.
-- **Figure1:** Contains the gene loss confirmation genes losses in thylacine and other marsupial species, IGV-reports, and gene loss history. **(Figure 1, figure S2, figure S5, figure S6, figure S7 and figure S8)**
+- **Figure1:** Contains the gene loss confirmation genes losses in thylacine and other marsupial species, IGV-reports, and gene loss history. **(Figure 1, figure S2, figure S5, figure S7, figure S8 and figure S9)**
 - **Figure2:** Contains the figure 2 figures and the inputs required to get figures like phylogenetic trees from TimeTree and iTOLs. **(Figure 2)**
 - **Figure3:**
 - (a) Contains the input and output files of GC-content variation in thylacine. **(Figure 3a)**
@@ -26,13 +26,13 @@ ________________________________________________________________________________
 - **IGV_reports-BWA+BLASTn:**  Contains the IGV-reports for clearly lost genes in chromosome-wise folders **(Figure 1)**
 - **Loss_confirmation:** Contains the output files of short-read BLASTn, bam-read count, and gene-loss events found by TOGA to generate a summary table and confirm gene loss. **(Figure 1, table S1)**
 - **Main_Figures:** contains the main figures in PNG and JPG formats.
-- **Myrmecobius_fasciatus_RNA_seq:** Contains an IGV screenshot for the _VWA7_ gene, subseted bam files, and BED files. **(figure S9)**
+- **Myrmecobius_fasciatus_RNA_seq:** Contains an IGV screenshot for the _VWA7_ gene, subseted bam files, and BED files. **(figure S10)**
 - **PAML_omega_SAMD9-9L:** Evolutionary rate dN/dS ratio (omega) across the _SAMD9_ and _SAMD9L_ genes. Contains the input and R script. **(figure S4)**
 - **Selection_analysis:**  Selection pressure analysis of lost gene across 21 marsupial species, tested using RELAX, codeML, MEME, FEL, aBSREL, BUSTED, and gBGC.  **(Figure 3 and table S5)**
 - **Thylacine_transcriptome-miRNA:** Contains BLASTn search output for lost genes and control genes in the miRNA database of thylacine.
 - **TOGA_output_sorted:** Contains the sorted output files of TOGA, such as inact_mut_data.txt and loss_summ_data.tsv, codon.fasta, nucleotide.fasta.tgz, prot.fasta, query_annotation.bed, and query_gene_spans.bed. Also, a mutation plot was generated using TOGA. **(Figure 1)**
 - **Synteny:** Contains the NCBI synteny images for _SAMD9L_, _HSD17B13_, _CUZD1_ and _VWA7_. **(figure S5 and tables S2)**
-- **_SAMD9_ gene loss:** 
+- **SAMD9_gene_loss_in_carnivore:** Contain the script for gene loss events identification by TOGA. Assembly verification output files of klumpy and igv reports of events by short read for dingo and tiger. **(figure S6)**
 ____________________________________________________________________________________________________________________________________________________
 **Prerequisites:**
 - TOGA (1.1.7)
